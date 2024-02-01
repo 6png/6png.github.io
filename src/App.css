@@ -1,0 +1,51 @@
+:root {
+    --header-text-color: rgb(222, 222, 222);
+    --header-background-color: rgb(22, 22, 22);
+    --text-color-darker: rgb(133, 133, 133);
+    --text-color-normal: rgb(166, 166, 166);
+    --text-color-lighter: rgb(199, 199, 199);
+    --page-background-color: ;
+
+    --font-family: "Cascadia Mono";
+    --font-url: url("../public/fonts/CascadiaMono.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Cascadia Mono";
+    src:
+        local("Cascadia Mono"), var(--font-url);
+}
+
+* {
+    font-family: "Cascadia Mono", monospace;
+    color: var(--text-color-normal);
+    margin: 0;
+    padding: 0;
+    border: 0px solid white;
+}
+
+a {
+    color: var(--textcolor-darker);
+    text-decoration: none;
+}
+
+body {
+    background-image: url("../public/images/background.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-size: 12px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -2;
+}
+

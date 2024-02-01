@@ -1,0 +1,26 @@
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding-top: 3px;
+    padding-bottom: 33px;
+    background-color: var(--header-background-color);
+}
+
+a {
+    color: var(--textcolor-darker);
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin: 6px 0;
+    font-size: 9px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 9px;
+}

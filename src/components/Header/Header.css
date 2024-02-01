@@ -1,0 +1,45 @@
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    background-color: var(--header-background-color);
+    padding-top: 33px;
+    padding-bottom: 3px;
+}
+
+a {
+    color: var(--textcolor-darker);
+    text-decoration: none;
+}
+
+#site-name {
+    color: var(--header-text-color);
+    font-size: x-large;
+}
+
+hr {
+    border: 2px groove var(--text-color-normal);
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 666px;
+}
+
+nav {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+
+nav a {
+    display: inline-block;
+    color: gray;
+    text-align: center;
+    padding: 3px 6px;
+}
+
+nav a:hover {
+    color: var(--text-color-2);
+}
