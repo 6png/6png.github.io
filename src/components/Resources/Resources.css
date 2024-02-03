@@ -1,0 +1,40 @@
+.resourcesWrapper {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+.resourcesCard {
+    background-color: var(--text-color-lighterer);
+    padding: 12px;
+    border-radius: 9px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 45%;
+}
+
+.top  {
+    width: 60%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+.resourcesContentCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.resourcesCard ul {
+    list-style-type: circle;
+    padding: 0 18px;
+}

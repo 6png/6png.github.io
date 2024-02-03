@@ -1,0 +1,102 @@
+.bodyWrapper {
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    color: var(--text-color-normal);
+}
+
+.side-menu {
+    width: 31%;
+}
+
+.side-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 0;
+    margin-top: 9px;
+}
+
+button {
+    background-color: var(--text-color-lighter);
+    border-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: var(--text-color-darkest);
+    margin: 0;
+    padding: 3px 9px;
+    text-align: right;
+    font-size: 12px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--text-color-lighterer);
+}
+
+.highlighted {
+    background-color: var(--text-color-lighterer);
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    background-color: var(--text-color-lighterer);
+    border-radius: 9px;
+    padding: 12px 9px;
+    min-height: 110px;
+}
+
+.contentInner {
+    padding: 9px 18px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentText {
+    color: var(--text-color-darkerer);
+}
+
+.signOff {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signOff .contentText {
+    margin-right: 33px;
+}
+
+.contentText i,
+.contentText b,
+.contentText li {
+    color: var(--text-color-darkerer);
+}
+
+.contentText li,
+.likes li {
+    list-style-type: circle;
+    margin-left: 18px;
+    color: var(--text-color-darkerer);
+}
+
+p ul,
+.likes ul {
+    flex-direction: column;
+    gap: 0;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.likes {
+    display: flex;
+    gap: 6px;
+}

@@ -4,23 +4,40 @@ footer {
     bottom: 0;
     padding-top: 3px;
     padding-bottom: 33px;
-    background-color: var(--header-background-color);
+    background-color: rgb(15, 15, 15);
 }
 
-a {
-    color: var(--textcolor-darker);
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.footerContent a {
+    color: var(--text-color-darker);
     text-decoration: none;
+}
+
+.footerContent a:hover {
+    text-decoration: underline;
 }
 
 .links {
     display: flex;
     justify-content: center;
+    gap: 9px;
     margin: 6px 0;
     font-size: 9px;
 }
 
-.copyright {
+.bottom {
     display: flex;
-    justify-content: flex-end;
-    padding: 0 9px;
+    justify-content: space-between;
+    padding: 0 18px;
+    width: 666px;  
+}
+
+.bottom p {
+    color: var(--text-color-darkerer);
 }

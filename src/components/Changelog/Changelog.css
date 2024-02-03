@@ -1,0 +1,34 @@
+.changelogWrapper {
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    max-height: 711px;
+}
+
+.changelogContent {
+    background-color: var(--text-color-lighterer);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    padding: 21px;
+}
+
+.changelogTitle {
+    color: var(--text-color-darkest);
+}
+
+.changelogEntries {
+    margin-top: 6px;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.changelogEntry {
+    margin-bottom: 12px;
+}
+
+.date,
+.message {
+    color: var(--text-color-darkerer);
+}

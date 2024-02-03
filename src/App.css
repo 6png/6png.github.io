@@ -1,9 +1,12 @@
 :root {
-    --header-text-color: rgb(222, 222, 222);
+    --header-text-color: rgb(244, 244, 244);
     --header-background-color: rgb(22, 22, 22);
+    --text-color-darkest: rgb(66, 66, 66);
+    --text-color-darkerer: rgb(99, 99, 99);
     --text-color-darker: rgb(133, 133, 133);
     --text-color-normal: rgb(166, 166, 166);
     --text-color-lighter: rgb(199, 199, 199);
+    --text-color-lighterer: rgb(222, 222, 222);
     --page-background-color: ;
 
     --font-family: "Cascadia Mono";
@@ -24,11 +27,6 @@
     border: 0px solid white;
 }
 
-a {
-    color: var(--textcolor-darker);
-    text-decoration: none;
-}
-
 body {
     background-image: url("../public/images/background.gif");
     background-repeat: no-repeat;
@@ -47,5 +45,21 @@ body::before {
     left: 0;
     background: rgba(0, 0, 0, 0.8);
     z-index: -2;
+}
+
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.component {
+    display: flex;
+    flex: 1;
+    width: 666px;
+}
+
+div {
+    width: 100%;
 }
 

@@ -1,17 +1,16 @@
 import React from 'react'
+import NavBar from './NavBar'
+
 import "./Header.css"
 
 const Header = () => {
     return (
         <header>
-            <h2><a href="/" id="site-name">is's ssd soup</a></h2>
-            <hr></hr>
-            <nav>
-                <a href="about">about</a>
-                <a href="stats">stats</a>
-                <a href="thoughts">thoughts</a>
-                <a href="resources">resources</a>
-            </nav>
+            <div className="headerContent">
+                <h2><a href="/" id="site-name">is's ssd soup</a></h2>
+                <hr id="headerHr"></hr>
+                <NavBar />
+            </div>
         </header>
     );
 };
