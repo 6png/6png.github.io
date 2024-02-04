@@ -86,14 +86,40 @@ const Site = () => {
 const Noodle = () => {
     return (
         <div className="contentInner">
-            <p className="contentText">
+            <p className="contentText noodleContent">
                 i have an unusual personality which most label unlikeable, or,
-                lightly stated, hard to understand. for this reason, i live in
-                anonymity. im aware that many of these are unpopular opinions
-                and do not expect agreement, but maintain the stances below.
-                <br></br><br></br><br></br>
-                <b>manifesto</b>
+                lightly stated, hard to understand. i attribute this judgment to the way
+                i choose to approach life. i deeply enjoy being a critic,
+                and while this tendency has its benefits, easily attracting friends
+                is not one of them. to clarify, it is not that i incessantly voice observed
+                faults to people around me; it is that humans' collective inclination to prefer
+                feel-good circlejerking over immediately acknowledging and addressing 'harsh' truths
+                frequently renders me wordless in social situations. however, i willingly choose this style of thinking over the prospect
+                of being accepted by the majority.
                 <br></br><br></br>
+                i dont really speak to anyone for 'enjoyment.' my idea of conversational enjoyment
+                is a game of tennis, where each swing is a reframed perspective or proposition; and ive found that
+                introspection is the most practical way to achieve that enjoyment. i can enjoy
+                company of animals and occasionally of other humans, but not really the talking part of it.
+                <br></br><br></br>
+                many people that met me later in life believe i am cold or arrogant.
+                to this, i understand why, but im really not sure how to respond. i think neither myself nor my thoughts superior to any other 'thing', whatever
+                that should be defined as. i only prefer internal dialogue to external interaction
+                because i know that most dont share my fiend for strange questions and i have no reason
+                to overwhelm anyone else with it. but there is nothing i can do to guarantee that others' perceptions of me
+                match my own perceptions of myself, and i have no desire to do so.
+                <br></br><br></br>
+                -------------------------------------------------------------------------
+                <br></br>
+                <b>life goal</b>
+                <br></br>
+                my ultimate and only goal is to firstly become financially independent and then either 1) obtain propofol or 
+                2) learn enough about the human brain / nervous system and pharmacology to formulate a 
+                mixture of substances that will induce unconsciousness and eventually death before any
+                perception of pain.
+                <br></br><br></br>
+                <b>manifesto</b>
+                <br></br>
                 <ul>
                     <li>access to euthanasia in chronic illness, old age, and other extenuating circumstances is a basic human right</li>
                     <ul class="subul">
@@ -102,7 +128,43 @@ const Noodle = () => {
                     <li>debate is productive and necessary</li>
                     <li>collective pursuit of truth results in peace</li>
                 </ul>
-                
+                <br></br>
+                -------------------------------------------------------------------------
+                <a href="https://www.sapa-project.org/" className="aboutTableTitle"><b>spi-5 results&#129109;</b></a>
+                <br></br>
+                <table className="aboutTable">
+                    <tr>
+                        <th>category</th>
+                        <th>score</th>
+                        <th>%ile</th>
+                    </tr>
+                    <tr>
+                        <td>agreeableness</td>
+                        <td>35</td>
+                        <td>| 7</td>
+                    </tr>
+                    <tr>
+                        <td>conscientiousness&nbsp;</td>
+                        <td>42</td>
+                        <td>|||| 21</td>
+                    </tr>
+                    <tr>
+                        <td>extraversion</td>
+                        <td>41</td>
+                        <td>||| 18</td>
+                    </tr>
+                    <tr>
+                        <td>neuroticism</td>
+                        <td>51</td>
+                        <td>||||||||||| 54</td>
+                    </tr>
+                    <tr>
+                        <td>openness</td>
+                        <td>56</td>
+                        <td>||||||||||||||| 73</td>
+                    </tr>
+                </table>
+                it also gave me a 99 %ile cognition score, which, despite being only 10 q's long, surprisingly does line up with other cognitive tests i've done (not professionally administered).
             </p>
         </div>
     )
@@ -124,6 +186,8 @@ const Corpus = () => {
             <p>-------------------------------------------------------------------------</p>
             <p className="contentText">
                 now for the lighter stuff... xD
+                <br></br>
+                obligatory likes/dislikes section, items listed alphabetically:
                 <br></br><br></br>
             </p>
             <div className="likes">
@@ -133,23 +197,23 @@ const Corpus = () => {
                         <ul>
                             <li>aim training</li>
                             <li>building mech kbs</li>
-                            <li>trying new mice</li>
+                            <li>collecting stationery</li>
+                            <li>discovering new music</li>
+                            <li>learning new skills</li>
                             <li>making lanyards</li>
+                            <li>playing with my dog</li>
                             <li>programming</li>
                             <li>time tracking</li>
-                            <li>discovering new music</li>
-                            <li>collecting stationery</li>
-                            <li>learning new skills</li>
-                            <li>playing with my dog</li>
+                            <li>trying new mice</li>
                         </ul>
                         <p><br></br></p>
                     </div>
                     <div className="category">
                         <p className="contentText underline">sniffa</p>
                         <ul>
-                            <li>tf black orchid</li>
                             <li>creed aventus for her</li>
                             <li>creed love in white</li>
+                            <li>tf black orchid</li>
                         </ul>
                     </div>
                     <p><br></br></p>
@@ -164,27 +228,27 @@ const Corpus = () => {
                     <div className="category">
                         <p className="contentText underline">ears</p>
                         <ul>
-                            <li>paganini</li>
-                            <li>mahler</li>
                             <li>dvorak</li>
-                            <li>katagiri</li>
                             <li>frxgxd</li>
+                            <li>katagiri</li>
                             <li>lamazep</li>
+                            <li>mahler</li>
+                            <li>paganini</li>
                         </ul>
                     </div>
                     <p><br></br></p>
                     <div className="category">
                         <p className="contentText underline">chops</p>
                         <ul>
-                            <li>mac n cheese</li>
                             <li>berries</li>
-                            <li>popcorn</li>
-                            <li>penne alla vodka</li>
-                            <li>most crunchy things</li>
-                            <li>milk tea</li>
-                            <li>water</li>
                             <li>chipotle</li>
                             <li>in-n-out</li>
+                            <li>mac n cheese</li>
+                            <li>milk tea</li>
+                            <li>most crunchy things</li>
+                            <li>penne alla vodka</li>
+                            <li>popcorn</li>
+                            <li>water</li>
                             <li>치즈 핫도그</li>
                         </ul>
                     </div>
@@ -193,17 +257,19 @@ const Corpus = () => {
                     <div className="category">
                         <p className="contentText underline">dislikes</p>
                         <ul>
+                            <li>allergies</li>
+                            <li>being misunderstood</li>
+                            <li>being required to speak for long periods</li>
+                            <li>being sick</li>
+                            <li>carpet</li>
+                            <li>cooked carrots</li>
+                            <li>grammar mistakes</li>
                             <li>loud people</li>
                             <li>mushrooms</li>
-                            <li>'white' lies</li>
                             <li>rpgs</li>
-                            <li>allergies</li>
-                            <li>being sick</li>
-                            <li>cooked carrots</li>
-                            <li>carpet</li>
-                            <li>the nature of life</li>
                             <li>reading fiction books</li>
-                            <li>being misunderstood</li>
+                            <li>the nature of life</li>
+                            <li>'white' lies</li>
                         </ul>
                     </div>
                 </div>

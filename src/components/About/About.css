@@ -100,3 +100,25 @@ p ul,
     display: flex;
     gap: 6px;
 }
+
+.contentText u,
+.aboutTable th,
+.aboutTable td {
+    color:  var(--text-color-darkerer)
+}
+
+.aboutTable {
+    border-collapse: collapse;
+    margin-bottom: 3px;
+}
+
+.aboutTable,
+.aboutTable th,
+.aboutTable td {
+    border: 1px solid var(--text-color-darkerer);
+    padding: 3px;
+}
+
+.aboutTable th {
+    text-align: left;
+}
