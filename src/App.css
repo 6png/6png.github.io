@@ -5,18 +5,25 @@
     --text-color-darkerer: rgb(99, 99, 99);
     --text-color-darker: rgb(133, 133, 133);
     --text-color-normal: rgb(166, 166, 166);
-    --text-color-lighter: rgb(199, 199, 199);
+    --text-color-lighter: rgb(188, 188, 188);
     --text-color-lighterer: rgb(222, 222, 222);
     --page-background-color: ;
 
-    --font-family: "Cascadia Mono";
-    --font-url: url("../public/fonts/CascadiaMono.ttf") format("truetype");
+    --font-family: "Cascadia Mono", "Consolas", monospace;
+    --font-url-cm: url("../public/fonts/CascadiaMono.ttf") format("truetype");
+    --font-url-cons: url("../public/fonts/Consolas.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Cascadia Mono";
     src:
-        local("Cascadia Mono"), var(--font-url);
+        local("Cascadia Mono"), var(--font-url-cm);
+}
+
+@font-face {
+    font-family: "Consolas";
+    src: 
+        local("Consolas"), var(--font-url-cons);
 }
 
 * {

@@ -8,7 +8,7 @@
 }
 
 .resourcesCard {
-    background-color: var(--text-color-lighterer);
+    background-color: var(--text-color-lighter);
     padding: 12px;
     border-radius: 9px;
     font-size: 10px;
@@ -20,16 +20,18 @@
 }
 
 .top  {
-    width: 60%;
+    width: 95.3%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 9px;
+    background-color: var(--text-color-lighterer);
 }
 
 .resourcesContentCards {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 9px;
 }
@@ -37,4 +39,10 @@
 .resourcesCard ul {
     list-style-type: circle;
     padding: 0 18px;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.resourcesCard .contentText a {
+    text-decoration: underline;
 }

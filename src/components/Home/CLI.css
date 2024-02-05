@@ -1,0 +1,89 @@
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.windowContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.window {
+    border: 3px solid var(--text-color-lighterer);
+}
+
+.windowTitleBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--text-color-lighterer);
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.windowTitleBar .left {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.windowTitleBar img {
+    height: 15px;
+}
+
+.windowTitle {
+    font-weight: normal;
+    color: black;
+    font-size: 10px;
+}
+
+.windowContent .output {
+    height: 400px;
+    width: auto;
+    overflow-y: auto;
+    background-color: black;
+    font-family: "Consolas";
+    padding: 3px;
+    color: white;
+}
+
+.input-container {
+    display: flex;
+}
+
+.windowContent * {
+    font-family: "Consolas", monospace;
+    color: white;
+}
+
+.windowContent .thing { 
+    background-color: black;
+}
+
+.input-container{ 
+    padding-left: 3px;
+    display: flex;
+    width: auto;
+}
+
+.input-container .input {
+    background-color: black;
+    width: 100%;
+    outline: none;
+}
+
+.flashing-cursor {
+    animation: blink is infinite;
+    width:  1px;
+    background-color:  white;
+    color: white;
+}

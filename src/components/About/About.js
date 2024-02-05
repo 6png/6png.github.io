@@ -39,16 +39,16 @@ const Site = () => {
                 i am active, so here it is. 
                 <br></br><br></br>
                 <b>why 'ssd soup'?</b>
-                &nbsp;&nbsp;is always complains about bad memory, and i have great memory;
+                &nbsp;&nbsp;is always complains about bad memory and struggling to "write to her ssd", and i have great memory;
                 she just tells me what she needs to remember and i act as her external ssd.
-                and 'soup': i do not like to be especially organized.
+                and 'soup': i am not very organized.
                 she tries to organize her thoughts before telling me them, but, hey, i am only soup --
                 a free medium.
                 <br></br><br></br>
                 <b>why am i here?</b>
                 &nbsp;&nbsp;my sole functions are to provide 1) motivation for is to learn more about
                 web development, 2) a canvas upon which she can try and apply new concepts, and
-                3) a central space to house a small portion of her creative hunger, until she
+                3) a central space to record a portion of her creative hunger, until she
                 eventually inevitably begins to scorn me. 
                 <br></br><br></br>
                 <b>am i alive?</b>
@@ -63,6 +63,10 @@ const Site = () => {
                 she will abandon me in favor of a newer, better, and more complex site. it's
                 alright, because, by that time in the not-so-distant future, i will have adequately fulfilled all three of
                 the aforementioned functions.
+                <br></br><br></br>
+
+                <b>where is your present held?</b>
+                &nbsp;&nbsp;<a href="https://github.io"><u>github</u></a>.
                 <br></br><br></br>
 
                 <b>how is working with is?</b>
@@ -90,7 +94,7 @@ const Noodle = () => {
                 i have an unusual personality which most label unlikeable, or,
                 lightly stated, hard to understand. i attribute this judgment to the way
                 i choose to approach life. i deeply enjoy being a critic,
-                and while this tendency has its benefits, easily attracting friends
+                and while this passion has its benefits, easily attracting friends
                 is not one of them. to clarify, it is not that i incessantly voice observed
                 faults to people around me; it is that humans' collective inclination to prefer
                 feel-good circlejerking over immediately acknowledging and addressing 'harsh' truths
@@ -98,22 +102,22 @@ const Noodle = () => {
                 of being accepted by the majority.
                 <br></br><br></br>
                 i dont really speak to anyone for 'enjoyment.' my idea of conversational enjoyment
-                is a game of tennis, where each swing is a reframed perspective or proposition; and ive found that
+                is a game of tennis, in which each swing delivers a reframed perspective or proposition; and ive found that
                 introspection is the most practical way to achieve that enjoyment. i can enjoy
                 company of animals and occasionally of other humans, but not really the talking part of it.
                 <br></br><br></br>
                 many people that met me later in life believe i am cold or arrogant.
-                to this, i understand why, but im really not sure how to respond. i think neither myself nor my thoughts superior to any other 'thing', whatever
+                to this, im really not sure how to respond, though i understand it. i think neither myself nor my thoughts superior to any other 'thing', whatever
                 that should be defined as. i only prefer internal dialogue to external interaction
-                because i know that most dont share my fiend for strange questions and i have no reason
-                to overwhelm anyone else with it. but there is nothing i can do to guarantee that others' perceptions of me
-                match my own perceptions of myself, and i have no desire to do so.
+                because i know that most dont share my fiend for strange and challenging questions and i have no reason
+                to overwhelm or bore anyone else with it. but there is nothing i can do to guarantee that others' perceptions of me
+                match my own perception of myself, and i have no desire to invest effort into guaranteeing that.
                 <br></br><br></br>
                 -------------------------------------------------------------------------
                 <br></br>
                 <b>life goal</b>
                 <br></br>
-                my ultimate and only goal is to firstly become financially independent and then either 1) obtain propofol or 
+                my ultimate and only goals are to firstly become financially independent and then either 1) obtain propofol or 
                 2) learn enough about the human brain / nervous system and pharmacology to formulate a 
                 mixture of substances that will induce unconsciousness and eventually death before any
                 perception of pain.
@@ -164,7 +168,7 @@ const Noodle = () => {
                         <td>||||||||||||||| 73</td>
                     </tr>
                 </table>
-                it also gave me a 99 %ile cognition score, which, despite being only 10 q's long, surprisingly does line up with other cognitive tests i've done (not professionally administered).
+                it also gave me a 99th %ile cognition score, which, despite being only 10 qs long, does line up with more complete cognitive tests ive done (not professionally administered).
             </p>
         </div>
     )
@@ -198,7 +202,6 @@ const Corpus = () => {
                             <li>aim training</li>
                             <li>building mech kbs</li>
                             <li>collecting stationery</li>
-                            <li>discovering new music</li>
                             <li>learning new skills</li>
                             <li>making lanyards</li>
                             <li>playing with my dog</li>
@@ -213,14 +216,17 @@ const Corpus = () => {
                         <ul>
                             <li>creed aventus for her</li>
                             <li>creed love in white</li>
-                            <li>tf black orchid</li>
+                            <li>tom ford black orchid</li>
                         </ul>
                     </div>
                     <p><br></br></p>
                     <div className="category">
                         <p className="contentText underline">eyes</p>
                         <ul>
+                            <li>beachfront views</li>
                             <li>grave of the fireflies</li>
+                            <li>minimalism</li>
+                            <li>stalking people online</li>
                         </ul>
                     </div>
                 </div>
@@ -234,6 +240,8 @@ const Corpus = () => {
                             <li>lamazep</li>
                             <li>mahler</li>
                             <li>paganini</li>
+                            <li>the sound of waves</li>
+                            <li>women's voices &gt;///&lt;</li>
                         </ul>
                     </div>
                     <p><br></br></p>
@@ -241,6 +249,7 @@ const Corpus = () => {
                         <p className="contentText underline">chops</p>
                         <ul>
                             <li>berries</li>
+                            <li>botan rice candy</li>
                             <li>chipotle</li>
                             <li>in-n-out</li>
                             <li>mac n cheese</li>
@@ -248,6 +257,8 @@ const Corpus = () => {
                             <li>most crunchy things</li>
                             <li>penne alla vodka</li>
                             <li>popcorn</li>
+                            <li>sakuma drops (choc)</li>
+                            <li>salad</li>
                             <li>water</li>
                             <li>치즈 핫도그</li>
                         </ul>
@@ -258,16 +269,23 @@ const Corpus = () => {
                         <p className="contentText underline">dislikes</p>
                         <ul>
                             <li>allergies</li>
+                            <li>auricularia auricula-judae</li>
                             <li>being misunderstood</li>
                             <li>being required to speak for long periods</li>
                             <li>being sick</li>
+                            <li>boiled carrots</li>
+                            <li>carbonated drinks</li>
                             <li>carpet</li>
-                            <li>cooked carrots</li>
+                            <li>dry skin</li>
+                            <li>flowers</li>
                             <li>grammar mistakes</li>
                             <li>loud people</li>
                             <li>mushrooms</li>
-                            <li>rpgs</li>
+                            <li>repetitive fugue-y piano pieces</li>
                             <li>reading fiction books</li>
+                            <li>sleep</li>
+                            <li>staying 'on task'</li>
+                            <li>story-based games</li>
                             <li>the nature of life</li>
                             <li>'white' lies</li>
                         </ul>
