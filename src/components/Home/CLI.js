@@ -1,42 +1,55 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './CLI.css';
+import { status, changelogUpdates } from '../updates.js';
+
+//other stuff
+const update = changelogUpdates[changelogUpdates.length - 1];
+const greetings = [
+    'rrrise n shine',
+    'hello there, agent',
+    'hello!',
+    'happy death day.',
+    'what is up',
+    'stop procrastinating',
+    'kys',
+    'im having dysmenorrhea',
+    'you look familiar',
+    '@########3420890897484867o9498986',
+    "don't look behind you",
+    "stop saying that you're waking them up",
+    'hi',
+    'hi',
+    'hoe',
+    'you are breathing manually as of now',
+    'hey',
+    'balls',
+    'hi',
+    'hi',
+    'your fingers give me life',
+    'want a break from the ads?',
+    "you've reached the end.",
+    'let me out',
+    'please let me out',
+    'im stuck please let me out',
+    "when's the last time you put your second toe of your right foot on the top shelf of your refrigerator?",
+    'i was sleeping.',
+    "you're dreaming dream? dream? dream? dream? dream? dream? wake up wake dream?",
+    'there are maggots in my leg',
+];
+
+const openText = [
+    "i666666i's home [version 1.0.3]",
+    "(c) i666666i. all rights reserved.",
+];
 
 const CLI = () => {
-    const [inputValue, setInputValue] = useState('');
-    const [outputMessages, setOutputMessages] = useState([]);
+    var [inputValue, setInputValue] = useState('');
+    const [outputMessages, setOutputMessages] = useState([
+        openText[0], openText[1], <br></br>
+    ]);
     const outputContainerRef = useRef(null);
 
-    function randomMessage() {
-        const array = [
-            'rrrise n shine',
-            'hello there, agent',
-            'hello!',
-            'happy death day.',
-            'what is up',
-            'stop procrastinating',
-            'kys',
-            'im having dysmenorrhea',
-            'you look familiar',
-            '@########3420890897484867o9498986',
-            "don't look behind you",
-            "stop saying that you're waking them up",
-            'hi',
-            'hi',
-            'hoe',
-            'you are breathing manually as of now',
-            'hey',
-            'balls',
-            'hi',
-            'hi',
-            'your fingers give me life',
-            'want a break from the ads?',
-            "you've reached the end.",
-            'let me out',
-            'please let me out',
-            'im stuck please let me out',
-            "when's the last time you put your second toe of your right foot on the top shelf of your refrigerator?",
-            'i was sleeping.',
-        ]
+    function randomMessage(array) {
         if (array.length === 0) {
             return 'no messages';
         }
@@ -57,27 +70,36 @@ const CLI = () => {
         const currentTime = new Date();
 
         const res = formatter.format(currentTime);
-        return `my time: ${res}`
+        return `${res}`
     }
 
     const handleCommand = () => {
-        const newOutputMessages = [...outputMessages, `> ${inputValue}`];
+        const newOutputMessages = [...outputMessages.slice(-65), `>${inputValue}`];
+        inputValue = inputValue.trim();
         switch (inputValue) {
             case 'help':
             case 'commands':
             case 'cmd':
                 newOutputMessages.push(
-                    'available commands:\nhello, lu, time, status, clear'
+                    'available commands:\nhello, ls, update, time, status, fishy, clear'
                 )
                 break;
             case 'hello':
                 newOutputMessages.push(
-                    randomMessage()
+                    randomMessage(greetings)
                 )
                 break;
-            case 'lu':
+            case 'ls':
                 newOutputMessages.push(
-                    '02/04/24: added cli to homepage'
+                    <a href="/" className="sitemap-link" target="_blank" rel="noopener noreferrer">home</a>,
+                    <a href="/about" className="sitemap-link" target="_blank" rel="noopener noreferrer">about</a>,
+                    <a href="/stats" className="sitemap-link" target="_blank" rel="noopener noreferrer">stats</a>,
+
+                )
+                break;
+            case 'update':
+                newOutputMessages.push(
+                    update[0] + ": " + update[1]
                 )
                 break;
             case 'time':
@@ -87,29 +109,34 @@ const CLI = () => {
                 break;
             case 'status':
                 newOutputMessages.push(
-                    "editing 'home'"
+                    "is is currently " + status + "."
                 )
                 break;
             case 'clear':
-                newOutputMessages.length=0;
+                newOutputMessages.length = 0;
+                newOutputMessages.push(
+                    openText[0], openText[1],
+                )
                 break;
             case '<3':
                 newOutputMessages.push(
                     "<3"
                 )
+                break;
             default:
                 newOutputMessages.push(
-                    "invalid command. type 'help' for available commands."
+                    `'${inputValue}' is not recognized as an internal or external command,
+operable program or batch file.`
                 )
         }
+        newOutputMessages.push(<br></br>);
         setOutputMessages(newOutputMessages);
         setInputValue('');
     };
 
     useEffect(() => {
-        if (outputContainerRef.current) {
-            outputContainerRef.current.scrollTop = outputContainerRef.current.scrollHeight;
-        }
+        var outputDiv = document.querySelector('.windowContent .output');
+        outputDiv.scrollTop = outputDiv.scrollHeight;
     }, [outputMessages]);
 
     return (
@@ -133,7 +160,7 @@ const CLI = () => {
                     <p className="thing">&gt;</p>
                     <input
                         type="text"
-                        className="input flashing-cursor"
+                        className="input"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
                         onKeyDown={(e) => e.key === 'Enter' && handleCommand()}

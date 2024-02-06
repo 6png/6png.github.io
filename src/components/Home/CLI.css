@@ -1,12 +1,6 @@
 @keyframes blink {
-    0% {
-        opacity: 1;
-    }
     50% {
         opacity: 0;
-    }
-    100% {
-        opacity: 1;
     }
 }
 
@@ -19,6 +13,8 @@
 
 .window {
     border: 3px solid var(--text-color-lighterer);
+    background-color: black;
+    height: 450px;
 }
 
 .windowTitleBar {
@@ -47,7 +43,8 @@
 }
 
 .windowContent .output {
-    height: 400px;
+    height: auto;
+    max-height: 405px;
     width: auto;
     overflow-y: auto;
     background-color: black;
@@ -67,6 +64,7 @@
 
 .windowContent .thing { 
     background-color: black;
+    font-size: 12px;
 }
 
 .input-container{ 
@@ -81,9 +79,8 @@
     outline: none;
 }
 
-.flashing-cursor {
-    animation: blink is infinite;
-    width:  1px;
-    background-color:  white;
-    color: white;
+
+
+.sitemap-link {
+    text-decoration: underline;
 }

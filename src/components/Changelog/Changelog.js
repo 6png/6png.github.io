@@ -1,5 +1,20 @@
 import React from 'react'
+import { changelogUpdates } from '../updates.js';
 import './Changelog.css'
+
+const generateChangelogEntries = () => {
+    return changelogUpdates.map(([date, message], index) => (
+        <article key={index} className="changelogEntry">
+            <h4 className="date">{date}</h4>
+            <p className="message">{message.split('\n').map((line, lineIndex) => (
+                <React.Fragment key={lineIndex}>
+                    {line}
+                    {lineIndex !== message.split('\n').length - 1 && <br />}
+                </React.Fragment>
+            ))}</p>
+        </article>
+    ));
+};
 
 const Changelog = () => {
     return (
@@ -8,21 +23,8 @@ const Changelog = () => {
                 <h3 className="changelogTitle">changelog</h3>
                 <p>-------------------------------------------------------------------------------</p>
                 <div className="changelogEntries">
-                    <article className="changelogEntry">
-                        <h4 className="date">02/03/24</h4>
-                        <p className="message">
-                            Made 'about' layout and added content in 'about' sections (site, noodle, corpus);<br></br>
-                            Made 'changelog' layout;
-                        </p>
-                    </article>
-                    <article className="changelogEntry">
-                        <h4 className="date">XX/XX/XX</h4>
-                        <p className="message">
-                            more text
-                        </p>
-                    </article>
+                    {generateChangelogEntries()}
                 </div>
-                
             </div>
             
         </div>
