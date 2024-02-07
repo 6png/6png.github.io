@@ -9,13 +9,13 @@
     --text-color-lighterer: rgb(222, 222, 222);
     --page-background-color: ;
 
-    --font-family: "Cascadia Mono", "Consolas", monospace;
-    --font-url-cm: url("../public/fonts/CascadiaMono.ttf") format("truetype");
+    --font-family: "JetBrainsMono", "Consolas", monospace;
+    --font-url-cm: url("../public/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
     --font-url-cons: url("../public/fonts/Consolas.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Cascadia Mono";
+    font-family: "JetBrainsMono";
     src:
         local("Cascadia Mono"), var(--font-url-cm);
 }

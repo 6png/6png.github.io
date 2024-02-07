@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './CLI.css';
-import { status, changelogUpdates } from '../updates.js';
+import { status, changelogUpdates, version } from '../updates.js';
 
 //other stuff
 const update = changelogUpdates[changelogUpdates.length - 1];
@@ -34,12 +34,23 @@ const greetings = [
     "when's the last time you put your second toe of your right foot on the top shelf of your refrigerator?",
     'i was sleeping.',
     "you're dreaming dream? dream? dream? dream? dream? dream? wake up wake dream?",
-    'there are maggots in my leg',
+    `⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣴⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⠿⠛⠋⠉⠁⠀⠀⠀⠈⠙⠻⢷⣦⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣤⣾⡿⠋⠁⠀⣠⣶⣿⡿⢿⣷⣦⡀⠀⠀⠀⠙⠿⣦⣀⠀⠀⠀⠀
+⠀⠀⢀⣴⣿⡿⠋⠀⠀⢀⣼⣿⣿⣿⣶⣿⣾⣽⣿⡆⠀⠀⠀⠀⢻⣿⣷⣶⣄⠀
+⠀⣴⣿⣿⠋⠀⠀⠀⠀⠸⣿⣿⣿⣿⣯⣿⣿⣿⣿⣿⠀⠀⠀⠐⡄⡌⢻⣿⣿⡷
+⢸⣿⣿⠃⢂⡋⠄⠀⠀⠀⢿⣿⣿⣿⣿⣿⣯⣿⣿⠏⠀⠀⠀⠀⢦⣷⣿⠿⠛⠁
+⠀⠙⠿⢾⣤⡈⠙⠂⢤⢀⠀⠙⠿⢿⣿⣿⡿⠟⠁⠀⣀⣀⣤⣶⠟⠋⠁⠀⠀⠀
+⠀⠀⠀⠀⠈⠙⠿⣾⣠⣆⣅⣀⣠⣄⣤⣴⣶⣾⣽⢿⠿⠟⠋⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠛⠙⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀`,
+    "you spend your energy trying to lengthen something that ends regardless",
+    "Shutting down.",
+    "do you really"
 ];
 
 const openText = [
-    "i666666i's home [version 1.0.3]",
-    "(c) i666666i. all rights reserved.",
+    "i666666i [Version " + version + "]",
+    "(c) 2024 i666666i. All rights reserved.",
 ];
 
 const CLI = () => {
@@ -47,7 +58,6 @@ const CLI = () => {
     const [outputMessages, setOutputMessages] = useState([
         openText[0], openText[1], <br></br>
     ]);
-    const outputContainerRef = useRef(null);
 
     function randomMessage(array) {
         if (array.length === 0) {
@@ -129,7 +139,7 @@ const CLI = () => {
 operable program or batch file.`
                 )
         }
-        newOutputMessages.push(<br></br>);
+        newOutputMessages.push('\n');
         setOutputMessages(newOutputMessages);
         setInputValue('');
     };
@@ -153,7 +163,15 @@ operable program or batch file.`
             <div className="windowContent">
                 <div className="output">
                     {outputMessages.map((message, index) => (
-                        <div key={index}>{message}</div>
+                        <div key={index}>
+                            {typeof message === 'string' && message.split('\n').map((line, lineIndex) => (
+                                <React.Fragment key={lineIndex}>
+                                    {line}
+                                    {lineIndex !== message.split('\n').length - 1 && <br />}
+                                </React.Fragment>
+                            ))}
+                            {typeof message !== 'string' && message} {/* Render non-string messages directly */}
+                        </div>
                     ))}
                 </div>
                 <div className="input-container">

@@ -1,3 +1,4 @@
+export const version = "1.0.3";
 export const status = "editing 'home'";
 export const changelogUpdates = [
     ["02/01/24",
