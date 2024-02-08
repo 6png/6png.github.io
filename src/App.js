@@ -1,4 +1,6 @@
 import React from 'react';
+import {Route, Routes} from "react-router-dom";
+
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
@@ -12,38 +14,21 @@ import Changelog from './components/Changelog/Changelog';
 import './App.css';
 
 const App = () => {
-  let Component;
-  switch (window.location.pathname) {
-    case "/":
-      Component = Home;
-      break;
-    case "/about":
-      Component = About;
-      break;
-    case "/stats":
-      Component = Stats;
-      break;
-    case "/thoughts":
-      Component = Thoughts;
-      break;
-    case "/resources":
-      Component = Resources;
-      break;
-    case "/resources/site-collection":
-      Component = SiteCollection;
-      break;
-    case "/changelog":
-      Component = Changelog;
-      break;
-    case "/todo":
-      Component = Todo;
-      break;
-  };
-
   return (
     <div className="pageWrapper">
       <div><Header /></div>
-      <div className="component"><Component /></div>
+      <div className="component">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/stats" element={<Stats />} />
+          <Route path="/thoughts" element={<Thoughts />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/resources/site-collection" element={<SiteCollection />} />
+          <Route path="/changelog" element={<Changelog />} />
+          <Route path="/todo" element={<Todo />} />
+        </Routes>
+      </div>
       <div><Footer /></div>
     </div>
   );

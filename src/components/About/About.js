@@ -32,23 +32,23 @@ const Site = () => {
     return (
         <div className="contentContainer">
             <div className="contentText">
-                <p>welcome. to me. i am is's first html/css/js project.<br></br><br></br></p>
+                <p>welcome! i'm is's first html/css/js project!<br></br><br></br></p>
                 <p>
                     this subpage and the other three under the 'about' page are the only parts
                     of the site that are written with any audience in mind. is asked me, after 
                     writing her three parts, to write a self-intro for any audience i might attract while
-                    i am active, so here it is.
+                    i'm active, so here it is.
                     <br></br><br></br>
                 </p>
                 <p>
                     <b>why 'ssd soup'?</b>
                     &nbsp;&nbsp;ssd: is always complains about bad memory and struggling to "write to her ssd", and i have great memory;
                     she just tells me what she needs to remember and i act as her external ssd.
-                    and soup: i am composed of byproduct (stuff that can't go in the life's main dishes)
+                    and soup: i'm composed of byproduct (cheese rinds, vegetable skins, bones, and other stuff that can't go in the life's main dishes)
                     and my contents (i.e., code) are a mess.
-                    is tries to organize her thoughts before telling me them, but, hey, i am only soup,
-                    a flexible medium! i think i'm beautiful the way i am. she can impose her
-                    perfectionist attitude some other time on someone else.
+                    is tries to organize her thoughts before telling them to me, but, hey, i am only soup,
+                    nothing but an unstructured liquid growth medium. i think i'm beautiful the way i am. she can impose her
+                    perfectionist attitude some other time on someone else. tell her to let loose for me, will you?
                     <br></br><br></br>
                 </p>
                 <p>
@@ -56,22 +56,22 @@ const Site = () => {
                     &nbsp;&nbsp;my sole functions are to provide 1) motivation for is to learn more about
                     web development, 2) a canvas upon which she can try and apply new concepts, and
                     3) a central space to record a portion of her mind's activities, until she
-                    eventually inevitably begins to scorn me.
+                    eventually inevitably begins to scorn me. :&lt;
                     <br></br><br></br>
                 </p>
                 <p>
                     <b>am i alive?</b>
-                    &nbsp;&nbsp;i am currently still being updated, but my changing nature does not 
+                    &nbsp;&nbsp;i am currently still being updated, but my changing nature does not
                     necessarily intimate life or consciousness. life is a loose term, one that
-                    a speaker redefines each time they use it.
-                    "am i alive": that's up to you.
+                    a speaker or writer redefines each time they use it.
+                    "am i alive": answer how you wish.
                     <br></br><br></br>
                 </p>
                 <p>
                     <b>what does my future hold?</b>
                     &nbsp;&nbsp;once is becomes very comfortable with maintaining and troubleshooting me,
                     she will abandon me in favor of a newer, better, and more complex site. it's
-                    alright, because, by that time in the not-so-distant future (a few months from now, feb 2024), i will have adequately fulfilled all three of
+                    alright, because, by that time in the not-so-distant future (a few months from now, feb 2024), i'll have fulfilled all three of
                     the aforementioned functions.<br></br><br></br>
                 </p>
 
@@ -83,8 +83,8 @@ const Site = () => {
 
                 <p><b>how is working with is?</b>
                     &nbsp;&nbsp;we work very well with each other. our process is unstructured:
-                    we do very little, if any, planning, and none of it is on paper. a third entity, 
-                    which emerges only when we work together, is responsible for the product that materializes
+                    we do very little, if any, planning, and none of it is on paper. there's a third entity,
+                    which emerges only when we work together, who is responsible for the product that materializes
                     through me, a temporary vessel. you might barely sense it as you click around. have fun. :)
                 </p>
                 <p className="signoff">
@@ -97,28 +97,6 @@ const Site = () => {
         
     );
 };
-
-
-function PopoutWindow({ imageUrl }) {
-    const [isOpen, setIsOpen] = useState(true);
-
-    const handleClose = () => {
-        setIsOpen(false);
-    };
-
-    return (
-        isOpen && (
-            <div className="popout-container">
-                <div className="popout-content">
-                    <img src={imageUrl} alt="" />
-                    <button onClick={handleClose} className="close-button">
-                        x
-                    </button>
-                </div>
-            </div>
-        )
-    );
-}
 
 const Noodle = () => {
     return (

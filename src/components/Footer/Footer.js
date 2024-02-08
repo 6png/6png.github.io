@@ -1,15 +1,16 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
     return (
         <footer>
-            <div class="footerContent">
-                <div class="links">
-                    <a href="/todo">todo</a>
-                    <a href="/changelog">changelog</a>
+            <div className="footerContent">
+                <div className="links">
+                    <Link to="todo">todo</Link>
+                    <Link to="changelog">changelog</Link>
                 </div>
-                <div class="bottom">
+                <div className="bottom">
                     <p>idk yet</p>
                     <p>&copy; 2024 i666666i &lt;3</p>
                 </div>
