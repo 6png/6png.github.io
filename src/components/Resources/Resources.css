@@ -31,18 +31,59 @@
 .resourcesContentCards {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 9px;
 }
 
 .resourcesCard ul {
-    list-style-type: circle;
-    padding: 0 18px;
     flex-direction: column;
-    gap: 3px;
+    gap: 1px;
 }
 
-.resourcesCard .contentText a {
+.resourcesCard li li {
+    list-style-type: circle;
+    margin-left: 10px;
+}
+
+.resourcesCard li {
+    list-style-type: circle;
+    margin-left: 10px;
+    color: var(--text-color-darkerer);
+}
+
+.resourcesCard a {
+    text-decoration: underline;
+}
+
+.siteColCard {
+    background-color: var(--text-color-lighter);
+    padding: 21px;
+    border-radius: 9px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 92%;
+}
+
+.siteColTable * {
+    color: var(--text-color-darkerer);
+    white-space: pre-line;
+}
+
+.siteColTable {
+    display: flex;
+    flex-direction: column;
+    border-collapse: collapse;
+}
+
+.siteColTable td {
+    border: 1px solid gray;
+    padding: 6px;
+}
+
+.siteColTable a {
     text-decoration: underline;
 }

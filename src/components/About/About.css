@@ -1,12 +1,13 @@
 .bodyWrapper {
-    padding: 18px;
+    padding: 33px;
     display: flex;
     align-items: flex-start;
     color: var(--text-color-normal);
 }
 
 .side-menu {
-    width: 31%;
+    width: 135px;
+    flex-shrink: 0;
 }
 
 .side-menu nav {
@@ -41,30 +42,38 @@ button:hover {
 
 .content {
     display: flex;
-    background-color: var(--text-color-lighterer);
-    border-radius: 9px;
-    padding: 12px 9px;
-    min-height: 110px;
-}
-
-.contentInner {
-    padding: 9px 18px;
-    font-size: 10px;
-    display: flex;
-    flex-direction: column;
 }
 
 .contentText {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
     color: var(--text-color-darkerer);
 }
 
-.signOff {
-    display: flex;
-    justify-content: flex-end;
+.contentText p {
+    color: var(--text-color-darkerer);
 }
 
-.signOff .contentText {
-    margin-right: 33px;
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--text-color-lighterer);
+    border-radius: 9px;
+    padding: 27px 36px;
+    min-height: 110px;
+    width: 387px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.signoff {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0px;
+    margin-top: 9px;
+    margin-right: 21px;
 }
 
 .contentText i,
@@ -73,21 +82,26 @@ button:hover {
     color: var(--text-color-darkerer);
 }
 
+.contentText a {
+    color: var(--text-color-darker)
+}
+
 .contentText li,
 .likes li {
     list-style-type: circle;
-    margin-left: 18px;
+    margin-left: 10px;
+    margin-right: 3px;
     color: var(--text-color-darkerer);
 }
 
-p ul,
+.contentText ul,
 .likes ul {
     flex-direction: column;
     gap: 0;
 }
 
-.underline {
-    text-decoration: underline;
+.weirdo {
+    margin-bottom: 3px;
 }
 
 .category {
@@ -119,6 +133,38 @@ p ul,
     padding: 3px;
 }
 
-.aboutTable th {
+th {
     text-align: left;
+    font-weight: 600;
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 9px;
+}
+
+.popout-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.popout-content {
+    padding: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }

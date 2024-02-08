@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './CLI.css';
 import { status, changelogUpdates, version } from '../updates.js';
 
 //other stuff
-const update = changelogUpdates[changelogUpdates.length - 1];
+const update = changelogUpdates[0];
 const greetings = [
     'rrrise n shine',
     'hello there, agent',
@@ -14,7 +14,7 @@ const greetings = [
     'kys',
     'im having dysmenorrhea',
     'you look familiar',
-    '@########3420890897484867o9498986',
+    '@########3420890897484867o9498986fw9f8798437nf8947b9b56',
     "don't look behind you",
     "stop saying that you're waking them up",
     'hi',
@@ -43,13 +43,17 @@ const greetings = [
 ⠀⠙⠿⢾⣤⡈⠙⠂⢤⢀⠀⠙⠿⢿⣿⣿⡿⠟⠁⠀⣀⣀⣤⣶⠟⠋⠁⠀⠀⠀
 ⠀⠀⠀⠀⠈⠙⠿⣾⣠⣆⣅⣀⣠⣄⣤⣴⣶⣾⣽⢿⠿⠟⠋⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠛⠙⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀`,
-    "you spend your energy trying to lengthen something that ends regardless",
+    "you spend more energy than you have trying to lengthen something that ends regardless",
     "Shutting down.",
-    "do you really"
+    "retrace your steps before i wipe your memory in\n3\n2\n1\n...",
+    "your real parents are calling for you in the hospital room. please wake up. they're pulling your plug tomorrow.",
+    "how many times have you said that",
+    "666666\n666666\n666666\n666666\n666666\n666666",
+    ""
 ];
 
 const openText = [
-    "i666666i [Version " + version + "]",
+    "ISOUP [Version " + version + "]",
     "(c) 2024 i666666i. All rights reserved.",
 ];
 
@@ -58,6 +62,7 @@ const CLI = () => {
     const [outputMessages, setOutputMessages] = useState([
         openText[0], openText[1], <br></br>
     ]);
+    const [showBlueScreen, setShowBlueScreen] = useState(false);
 
     function randomMessage(array) {
         if (array.length === 0) {
@@ -84,50 +89,128 @@ const CLI = () => {
     }
 
     const handleCommand = () => {
-        const newOutputMessages = [...outputMessages.slice(-65), `>${inputValue}`];
+        const newOutputMessages = [...outputMessages.slice(-65), `C:\\Users\\guest>${inputValue}`];
+        
         inputValue = inputValue.trim();
         switch (inputValue) {
+            // show commands
             case 'help':
             case 'commands':
-            case 'cmd':
                 newOutputMessages.push(
-                    'available commands:\nhello, ls, update, time, status, fishy, clear'
+                    'available commands:\nhello, lu, update, time, status, fishy, clear'
                 )
                 break;
+            // hello typos
+            case 'hell':
+                newOutputMessages.push(
+                    'is earth'
+                )
+                break;
+            case 'helo':
+            case 'hllo':
+            case 'hlelo':
+                newOutputMessages.push(
+                    'wow what an idiot'
+                )
+                break;
+            // hello variations
+            case 'hi':
+            case 'hey':
             case 'hello':
                 newOutputMessages.push(
                     randomMessage(greetings)
                 )
                 break;
+            // sitemap
             case 'ls':
+            case 'dir':
                 newOutputMessages.push(
-                    <a href="/" className="sitemap-link" target="_blank" rel="noopener noreferrer">home</a>,
-                    <a href="/about" className="sitemap-link" target="_blank" rel="noopener noreferrer">about</a>,
-                    <a href="/stats" className="sitemap-link" target="_blank" rel="noopener noreferrer">stats</a>,
-
+                    "home* | about | stats | thoughts | resources | changelog"
                 )
                 break;
-            case 'update':
+            // sitemap links
+            case 'cd':
                 newOutputMessages.push(
-                    update[0] + ": " + update[1]
+                    "C:\\Users\\guest"
                 )
                 break;
+            case 'cd about':
+                newOutputMessages.push(
+                    <a href="/about" className="sitemap-link" target="_blank" rel="noopener noreferrer">redirect to about</a>,
+                )
+                break;
+            case 'cd stats':
+                newOutputMessages.push(
+                    <a href="/stats" className="sitemap-link" target="_blank" rel="noopener noreferrer">redirect to stats</a>,
+                )
+                break;
+            case 'cd thoughts':
+                newOutputMessages.push(
+                    <a href="/thoughts" className="sitemap-link" target="_blank" rel="noopener noreferrer">redirect to thoughts</a>
+                )
+                break;
+            case 'cd changelog':
+                newOutputMessages.push(
+                    <a href="/changelog" className="sitemap-link" target="_blank" rel="noopener noreferrer">redirect to changelog</a>
+                )
+                break;
+            case 'cd resources':
+                newOutputMessages.push(
+                    <a href="/resources" className="sitemap-link" target="_blank" rel="noopener noreferrer">redirect to resources</a>
+                )
+                break;
+            // bsod
+            case 'rmdir guest':
+            case 'rd guest':
+                setTimeout(() => {
+                    setShowBlueScreen(true);
+                }, 3000);
+                break;
+            // idk just handle rd commands
+            case 'rd about':
+            case 'rd stats':
+            case 'rd thoughts':
+            case 'rd changelog':
+            case 'rd resources':
+            case 'rmdir about':
+            case 'rmdir stats':
+            case 'rmdir thoughts':
+            case 'rmdir changelog':
+            case 'rmdir resources':
+                newOutputMessages.push(
+                    'get out brudda'
+                )
+                break;
+            // latest update
+            case 'lu':
+                newOutputMessages.push(
+                    "latest update, " + update[0] + ": " + update[1]
+                )
+                break;
+            // time
             case 'time':
                 newOutputMessages.push(
                     showTime()
                 )
                 break;
+            // status
             case 'status':
                 newOutputMessages.push(
                     "is is currently " + status + "."
                 )
                 break;
-            case 'clear':
+            // random fishy
+            case 'fishy':
+                //IMPLEMENT RAND FISHY
+                break;
+            // clear commands
+            case 'cls':
                 newOutputMessages.length = 0;
                 newOutputMessages.push(
                     openText[0], openText[1],
                 )
                 break;
+            // misc hidden
             case '<3':
                 newOutputMessages.push(
                     "<3"
@@ -146,47 +229,62 @@ operable program or batch file.`
 
     useEffect(() => {
         var outputDiv = document.querySelector('.windowContent .output');
-        outputDiv.scrollTop = outputDiv.scrollHeight;
+        if (outputDiv) {
+            outputDiv.scrollTop = outputDiv.scrollHeight;
+        }
     }, [outputMessages]);
 
     return (
-        <div className="window">
-            <div className="windowTitleBar">
-                <div className="left">
-                    <img src="/images/cmd-icon.png"></img>
-                    <h4 className="windowTitle">command prompt</h4>
-                </div>
-                <div className="right">
-
-                </div>
-            </div>
-            <div className="windowContent">
-                <div className="output">
-                    {outputMessages.map((message, index) => (
-                        <div key={index}>
-                            {typeof message === 'string' && message.split('\n').map((line, lineIndex) => (
-                                <React.Fragment key={lineIndex}>
-                                    {line}
-                                    {lineIndex !== message.split('\n').length - 1 && <br />}
-                                </React.Fragment>
-                            ))}
-                            {typeof message !== 'string' && message} {/* Render non-string messages directly */}
+        <div>
+            {showBlueScreen ? (
+                <div className="window blueScreen">
+                    <div className="windowTitleBar">
+                        <div className="left">
+                            <img src="/images/cmd-icon.png" alt="Command Prompt Icon"></img>
+                            <h4 className="windowTitle">Command Prompt</h4>
                         </div>
-                    ))}
+                        <div className="right"></div>
+                    </div>
+                    <div className="windowContent">
+                    </div>
                 </div>
-                <div className="input-container">
-                    <p className="thing">&gt;</p>
-                    <input
-                        type="text"
-                        className="input"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                        onKeyDown={(e) => e.key === 'Enter' && handleCommand()}
-                    />
+            ) : (
+                <div className="window">
+                    <div className="windowTitleBar">
+                        <div className="left">
+                            <img src="/images/cmd-icon.png" alt="Command Prompt Icon"></img>
+                            <h4 className="windowTitle">Command Prompt</h4>
+                        </div>
+                        <div className="right"></div>
+                    </div>
+                    <div className="windowContent">
+                        <div className="output">
+                            {outputMessages.map((message, index) => (
+                                <div key={index}>
+                                    {typeof message === 'string' && message.split('\n').map((line, lineIndex) => (
+                                        <React.Fragment key={lineIndex}>
+                                            {line}
+                                            {lineIndex !== message.split('\n').length - 1 && <br />}
+                                        </React.Fragment>
+                                    ))}
+                                    {typeof message !== 'string' && message} { }
+                                </div>
+                            ))}
+                        </div>
+                        <div className="input-container">
+                            <p className="thing">C:\Users\guest&gt;</p>
+                            <input
+                                type="text"
+                                className="input"
+                                value={inputValue}
+                                onChange={(e) => setInputValue(e.target.value)}
+                                onKeyDown={(e) => e.key === 'Enter' && handleCommand()}
+                            />
+                        </div>
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
-        
     );
 
 };

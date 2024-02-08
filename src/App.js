@@ -6,6 +6,8 @@ import About from './components/About/About';
 import Stats from './components/Stats/Stats';
 import Thoughts from './components/Thoughts/Thoughts';
 import Resources from './components/Resources/Resources';
+import SiteCollection from './components/Resources/SiteCollection/SiteCollection';
+import Todo  from './components/Todo/Todo'
 import Changelog from './components/Changelog/Changelog';
 import './App.css';
 
@@ -27,8 +29,14 @@ const App = () => {
     case "/resources":
       Component = Resources;
       break;
+    case "/resources/site-collection":
+      Component = SiteCollection;
+      break;
     case "/changelog":
       Component = Changelog;
+      break;
+    case "/todo":
+      Component = Todo;
       break;
   };
 

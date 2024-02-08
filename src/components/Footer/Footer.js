@@ -6,7 +6,8 @@ const Footer = () => {
         <footer>
             <div class="footerContent">
                 <div class="links">
-                <a href="changelog">changelog</a>
+                    <a href="/todo">todo</a>
+                    <a href="/changelog">changelog</a>
                 </div>
                 <div class="bottom">
                     <p>idk yet</p>
