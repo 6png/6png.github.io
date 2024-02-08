@@ -97,7 +97,7 @@ const CLI = () => {
             case 'help':
             case 'commands':
                 newOutputMessages.push(
-                    'available commands:\nhello, lu, update, time, status, fishy, clear'
+                    'available commands:\nhello, lu, cd, time, status, fishy, cls'
                 )
                 break;
             // hello typos
@@ -178,13 +178,13 @@ const CLI = () => {
             case 'rmdir changelog':
             case 'rmdir resources':
                 newOutputMessages.push(
-                    'get out brudda'
+                    'stop it'
                 )
                 break;
             // latest update
             case 'lu':
                 newOutputMessages.push(
-                    "latest update, " + update[0] + ": " + update[1]
+                    update[0] + "\n" + update[1]
                 )
                 break;
             // time
@@ -197,6 +197,17 @@ const CLI = () => {
             case 'status':
                 newOutputMessages.push(
                     "is is currently " + status + "."
+                )
+                break;
+            case 'soup':
+                newOutputMessages.push(
+                    "hiiiiii :3"
+                )
+                break;
+            case 'i666666i':
+            case 'is':
+                newOutputMessages.push(
+                    "Your IP has successfully been sent to 'i666666i.xyz'."
                 )
                 break;
             // random fishy

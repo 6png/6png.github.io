@@ -2,7 +2,6 @@
     padding: 18px;
     display: flex;
     justify-content: center;
-    border: 1px solid white;
     max-height: 711px;
 }
 
@@ -11,17 +10,23 @@
     border-radius: 9px;
     display: flex;
     flex-direction: column;
-    padding: 21px;
+    padding: 33px;
+    overflow-y: auto;
+    max-height: 732px;
+    box-sizing: border-box;
 }
 
 .changelogTitle {
     color: var(--text-color-darkest);
+    align-self: flex-start;
+}
+
+.changelogContent p {
+    align-self: flex-start;
 }
 
 .changelogEntries {
     margin-top: 6px;
-    padding-left: 9px;
-    padding-right: 9px;
 }
 
 .changelogEntry {
@@ -30,5 +35,14 @@
 
 .date,
 .message {
+    font-size: 11px;
+}
+
+.date {
     color: var(--text-color-darkerer);
+}
+
+.message {
+    color: var(--text-color-darker);
+    white-space: pre-line;
 }

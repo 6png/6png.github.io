@@ -71,11 +71,10 @@
 .siteColTable * {
     color: var(--text-color-darkerer);
     white-space: pre-line;
+    width: 100%;
 }
 
 .siteColTable {
-    display: flex;
-    flex-direction: column;
     border-collapse: collapse;
 }
 

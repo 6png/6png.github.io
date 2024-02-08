@@ -85,7 +85,7 @@ const Site = () => {
                     &nbsp;&nbsp;we work very well with each other. our process is unstructured:
                     we do very little, if any, planning, and none of it is on paper. a third entity, 
                     which emerges only when we work together, is responsible for the product that materializes
-                    through me, a temporary vessel. you might barely sense it.
+                    through me, a temporary vessel. you might barely sense it as you click around. have fun. :)
                 </p>
                 <p className="signoff">
                     <br></br>

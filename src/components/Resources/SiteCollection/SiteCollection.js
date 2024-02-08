@@ -1,5 +1,5 @@
 import React from 'react'
-import { SitesInfo } from './SitesInfo';
+import { Permanent, Temp } from './SitesInfo';
 import '../Resources.css'
 
 function generateSitesTable(sitesInfo) {
@@ -22,15 +22,24 @@ function generateSitesTable(sitesInfo) {
 }
 
 const SiteCollection = () => {
-    const SitesTable = generateSitesTable(SitesInfo);
+    const PermanentSiteCollection = generateSitesTable(Permanent);
+    const ToExploreSiteCollection = generateSitesTable(Temp);
     return (
         <div className="resourcesWrapper">
+            <div className="resourcesCard top">
+                <h4 className="contentText">permanent site collection</h4>
+            </div>
             <div className="resourcesContentCards">
-                <div className="resourcesCard top">
-                    <h4 className="contentText">site collection</h4>
-                </div>
                 <div className="siteColCard">
-                    {SitesTable}
+                    {PermanentSiteCollection}
+                </div>
+            </div>
+            <div className="resourcesCard top">
+                <h4 className="contentText">to explore</h4>
+            </div>
+            <div className="resourcesContentCards">
+                <div className="siteColCard">
+                    {ToExploreSiteCollection}
                 </div>
             </div>
         </div>

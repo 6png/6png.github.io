@@ -18,7 +18,8 @@ const Resources = () => {
                     </p>
                     <ul>
                         <li><a href="https://code.visualstudio.com/">visual studio code</a>
-                        <br></br>this is the only text editor i use for html/css/js</li>
+                            <br></br>this is the only text editor i use for html/css/js
+                        </li>
                     </ul>
                 </div>
                 <div className="resourcesCard">
@@ -45,11 +46,24 @@ const Resources = () => {
                         <li>scripts
                             <ul>
                                 <li><a>oneko</a></li>
-                            </ul> 
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div className="resourcesCard">
+                    <h4 className="contentText">design inspo</h4>
+                    <p className="contentText">
+                        ------------------------------------------------
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="/resources/site-collection">site collection</a>
+                            <br></br>permanent bookmarks and a to-explore list, with notes
                         </li>
                     </ul>
                 </div>
             </div>
+
             <div className="resourcesCard top">
                 <img src="/images/jellyfishcute.gif"></img>
                 <p className="contentText">
@@ -64,15 +78,43 @@ const Resources = () => {
                     </p>
                     <ul>
                         <li><a href="">benchmark list</a></li>
+                        <li>
+                            <a href="https://store.steampowered.com/app/824270/KovaaKs/">kovaaks</a>
+                            <br></br>current best trainer
+                        </li>
+                        <li>
+                            <a href="https://store.steampowered.com/app/1100990/Aimbeast/">aimbeast</a>
+                            <br></br>up-and-coming best trainer
+                        </li>
+                        <li>
+                            <a href="https://store.steampowered.com/app/714010/Aimlabs/">aimlabs</a>
+                            <br></br>very bad trainer except for score system / api
+                        </li>
+                        <li>
+                            <a href="https://github.com/helloimxtal/BallSheetOGL">ballsheetogl</a>
+                            <br></br>2d vrt
+                        </li>
+                        <li>
+                            <a href="https://aim400kg.com">aim400kg</a>
+                            <br></br>browser-based 2d trainer
+                        </li>
+
                     </ul>
                 </div>
                 <div className="resourcesCard">
-                    <h4 className="contentText">content & design inspo</h4>
+                    <h4 className="contentText">program</h4>
                     <p className="contentText">
                         ------------------------------------------------
                     </p>
                     <ul>
-                        <li><a href="/resources/site-collection">site collection (with notes)</a></li>
+                        <li>
+                            <a href="https://app.hackthebox.com/">hack the box</a>
+                            <br></br>interactive cybersec tutorials
+                        </li>
+                        <li>
+                            <a href="https://learngitbranching.js.org">learn git branching</a>
+                            <br></br>interactive git tutorials
+                        </li>
                     </ul>
                 </div>
             </div>
