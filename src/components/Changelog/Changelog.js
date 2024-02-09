@@ -20,8 +20,8 @@ const Changelog = () => {
     }, []);
 
     const RenderCommits = ({ commitsToRender }) => {
-        return commitsToRender.map(commit => (
-            <div className="changelogEntry" key={commit.index}>
+        return commitsToRender.map((commit, index) => (
+            <div className="changelogEntry" key={index}>
                 <p className="date">{formatDate(commit.date)}:</p>
                 <p className="message">{commit.message}</p>
             </div>
