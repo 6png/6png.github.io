@@ -43,12 +43,12 @@
 
 .resourcesCard li li {
     list-style-type: circle;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 
 .resourcesCard li {
     list-style-type: circle;
-    margin-left: 10px;
+    margin-left: 12px;
     color: var(--text-color-darkerer);
 }
 
@@ -57,7 +57,7 @@
 }
 
 .resourcesCardTitle {
-    margin: 0 2px;
+    margin: 0 3px;
 }
 
 .siteColCard {
@@ -89,4 +89,10 @@
 
 .siteColTable a {
     text-decoration: underline;
+}
+
+.resourcesCardHr {
+    width: 100%;
+    border-top: 1px outset var(--text-color-darkerer);
+    margin: 4px 0;
 }

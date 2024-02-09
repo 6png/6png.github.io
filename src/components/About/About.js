@@ -114,33 +114,41 @@ const Noodle = () => {
                     is not one of them. i also naturally am not drawn to many of the interests
                     or media that most, at least my age, are drawn to; and i do not make any
                     extra effort to engage in them to the ends of being easier to relate to.
-                    however, i still willingly choose this style of thinking and forgo the prospect of being accepted by the majority.
+                    however, i still willingly choose this style of thinking and forgo the prospect of being accepted by
+                    the majority.
                     <br></br><br></br>
                 </p>
                 <p>
                     i dont really speak to anyone for 'enjoyment.' my idea of a worthwhile conversation
                     is akin to a game of tennis, in which each swing delivers a reframed perspective or proposition
                     that challenges the opponent. in real life, however, most players prefer to rally.
-                    and so it follows that introspection is the most practical way for me to achieve that enjoyment on-demand. i can enjoy
-                    company of animals and occasionally of other humans, but not really the talking part of it, without feeling frustrated -- at myself
+                    and so it follows that introspection is the most practical way for me to achieve that enjoyment
+                    on-demand. i can enjoy
+                    company of animals and occasionally of other humans, but not really the talking part of it, without
+                    feeling frustrated -- at myself
                     for not enjoying it like they do -- so i typically avoid it.
                     <br></br><br></br>
-                </p>    
+                </p>
                 <p>
                     many people that met me later in life believe i am cold or arrogant.
-                    to this, im really not sure how to respond, though i understand it. i think neither myself nor my thoughts superior to any other 'thing', whatever
+                    to this, im really not sure how to respond, though i understand it. i think neither myself nor my
+                    thoughts superior to any other 'thing', whatever
                     that should be defined as. i only prefer internal dialogue to external interaction
-                    because people dont respond well to my fiend for strange and challenging questions and i have no reason
-                    to overwhelm or bore anyone else with it. ultimately, there is nothing i can do to guarantee that others' perceptions of me
-                    match my own perception of myself, and i have no desire to invest extra effort, beyond initialization, into guaranteeing that.
+                    because people dont respond well to my fiend for strange and challenging questions and i have no
+                    reason
+                    to overwhelm or bore anyone else with it. ultimately, there is nothing i can do to guarantee that
+                    others' perceptions of me
+                    match my own perception of myself, and i have no desire to invest extra effort, beyond
+                    initialization, into guaranteeing that.
                     <br></br><br></br>
-                    ------------------------------------------------------------------
                 </p>
+                <hr></hr>
                 <p>
                     <b>life goal</b>
                     <br></br>
-                    my ultimate and only goals are to firstly become financially independent and then either 1) obtain propofol or 
-                    2) learn enough about the human brain / nervous system and pharmacology to formulate a 
+                    my ultimate and only goals are to firstly become financially independent and then either 1) obtain
+                    propofol or
+                    2) learn enough about the human brain / nervous system and pharmacology to formulate a
                     mixture of substances that will induce unconsciousness and eventually death before any
                     perception of pain.
                     <br></br><br></br>
@@ -148,81 +156,81 @@ const Noodle = () => {
                 <p>
                     <b>manifesto</b>
                     <br></br>
-                </p>  
+                </p>
                 <ul>
-                    <li>access to euthanasia in chronic illness, old age, and other extenuating circumstances is a basic human right
+                    <li>access to euthanasia in chronic illness, old age, and other extenuating circumstances is a basic
+                        human right
                         that should be protected by law
                     </li>
                     <ul className="subul">
-                        
+
                     </ul>
                     <li>debate is productive and necessary</li>
                     <li>collective pursuit of truth results in peace</li>
                 </ul>
                 <p>
                     <br></br>
-                    ------------------------------------------------------------------
                 </p>
+                <hr></hr>
                 <p className="weirdo">
                     <b>quizzes</b>
                 </p>
                 <div className="quiz">
-                    <a href="https://www.sapa-project.org/" target="_blank" rel="noopener noreferrer">spi-5&#129109;:</a>
+                    <a href="https://www.sapa-project.org/" target="_blank"
+                       rel="noopener noreferrer">spi-5&#129109;:</a>
                     <table className="aboutTable">
                         <thead>
-                            <tr>
-                                <th>category</th>
-                                <th>score</th>
-                                <th>%ile</th>
-                            </tr>
+                        <tr>
+                            <th>category</th>
+                            <th>score</th>
+                            <th>%ile</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>agreeableness</td>
-                                <td>35</td>
-                                <td>| 7</td>
-                            </tr>
-                            <tr>
-                                <td>conscientiousness&nbsp;</td>
-                                <td>42</td>
-                                <td>|||| 21</td>
-                            </tr>
-                            <tr>
-                                <td>extraversion</td>
-                                <td>41</td>
-                                <td>||| 18</td>
-                            </tr>
-                            <tr>
-                                <td>neuroticism</td>
-                                <td>51</td>
-                                <td>||||||||||| 54</td>
-                            </tr>
-                            <tr>
-                                <td>openness</td>
-                                <td>56</td>
-                                <td>||||||||||||||| 73</td>
-                            </tr>
-                            <tr>
-                                <td>*cognition</td>
-                                <td>-</td>
-                                <td>|||||||||||||||||||| 99</td>
-                            </tr>
+                        <tr>
+                            <td>agreeableness</td>
+                            <td>35</td>
+                            <td>| 7</td>
+                        </tr>
+                        <tr>
+                            <td>conscientiousness&nbsp;</td>
+                            <td>42</td>
+                            <td>|||| 21</td>
+                        </tr>
+                        <tr>
+                            <td>extraversion</td>
+                            <td>41</td>
+                            <td>||| 18</td>
+                        </tr>
+                        <tr>
+                            <td>neuroticism</td>
+                            <td>51</td>
+                            <td>||||||||||| 54</td>
+                        </tr>
+                        <tr>
+                            <td>openness</td>
+                            <td>56</td>
+                            <td>||||||||||||||| 73</td>
+                        </tr>
+                        <tr>
+                            <td>*cognition</td>
+                            <td>-</td>
+                            <td>|||||||||||||||||||| 99</td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
                 <div className="quiz">
-                    <a href="https://www.thevividmind.org/blog/test/pid5-online/" target="_blank" rel="noopener noreferrer">pid-5&#129109;:</a><p>[ten highest scores]</p>
+                    <a href="https://www.thevividmind.org/blog/test/pid5-online/" target="_blank"
+                       rel="noopener noreferrer">pid-5&#129109;:</a><p>[ten highest scores]</p>
                     <p>withdrawal, distractibility, suspiciousness, restricted affectivity,
                         depressivity, detachment (domain), intimacy avoidance, attention seeking,
                         eccentricity, and unusual beliefs & experiences.
                     </p>
                 </div>
-                <p>
-                    ------------------------------------------------------------------
-                </p>
 
             </div>
-            
+
         </div>
         
     )
@@ -248,9 +256,7 @@ const Corpus = () => {
                     or triggering to you, please be responsible and click off.
                     <br></br><br></br>
                 </p>
-                <p>
-                    ------------------------------------------------------------------
-                </p>
+                <hr></hr>
                 <p>
                     obligatory likes/dislikes section, items listed alphabetically:
                     <br></br><br></br>

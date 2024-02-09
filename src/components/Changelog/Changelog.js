@@ -32,7 +32,7 @@ const Changelog = () => {
         <div className="changelogWrapper">
             <div className="changelogContent">
                 <h4 className="changelogTitle">changelog</h4>
-                <p>-----------------------------------------------------------------------------</p>
+                <hr></hr>
                 <div className="changelogEntries">
                     <RenderCommits commitsToRender={commits} />
                 </div>

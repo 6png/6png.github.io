@@ -146,3 +146,8 @@ th {
     justify-content: center;
     margin-bottom: 9px;
 }
+
+.contentText hr {
+    border-top: 1px solid var(--text-color-normal);
+    margin: 6px 0;
+}

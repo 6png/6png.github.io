@@ -1,5 +1,5 @@
 .changelogWrapper {
-    padding: 18px;
+    padding: 33px;
     display: flex;
     justify-content: center;
     max-height: 711px;
@@ -19,7 +19,8 @@
 .changelogTitle {
     color: var(--text-color-darkest);
     align-self: flex-start;
-    font-size: 14px;
+    font-size: 15px;
+    margin-left: 2px;
 }
 
 .changelogContent p {
@@ -51,4 +52,9 @@
 .message {
     color: var(--text-color-darker);
     white-space: pre-line;
+}
+
+.changelogContent hr {
+    border-top: 1px solid var(--text-color-normal);
+    margin: 6px 0;
 }
