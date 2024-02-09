@@ -11,6 +11,7 @@
 .thoughtName p:hover {
     color: var(--text-color-darkerer);
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .thoughtContent button {
@@ -20,10 +21,6 @@
     color: var(--text-color-normal);
     background-color: rgb(255, 255, 255, 0);
     border: 0;
-}
-
-.thoughtContent button:hover {
-    color: var(--text-color-darkerer);
 }
 
 .thoughtContent h2 {
