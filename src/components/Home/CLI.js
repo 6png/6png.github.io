@@ -148,27 +148,27 @@ const CLI = () => {
                 break;
             case 'cd about':
                 newOutputMessages.push(
-                    <a href="/about" className="sitemap-link" target="_blank" rel="noopener noreferrer">redirect to about</a>,
+                    <a href="/about" className="sitemap-link" target="_blank" rel="noopener noreferrer">C:\Users\i666666i\about</a>,
                 )
                 break;
             case 'cd stats':
                 newOutputMessages.push(
-                    <a href="/stats" className="sitemap-link" target="_blank" rel="noopener noreferrer">redirect to stats</a>,
+                    <a href="/stats" className="sitemap-link" target="_blank" rel="noopener noreferrer">C:\Users\i666666i\stats</a>,
                 )
                 break;
             case 'cd thoughts':
                 newOutputMessages.push(
-                    <a href="/thoughts" className="sitemap-link" target="_blank" rel="noopener noreferrer">redirect to thoughts</a>
+                    <a href="/thoughts" className="sitemap-link" target="_blank" rel="noopener noreferrer">C:\Users\i666666i\thoughts</a>
                 )
                 break;
             case 'cd changelog':
                 newOutputMessages.push(
-                    <a href="/changelog" className="sitemap-link" target="_blank" rel="noopener noreferrer">redirect to changelog</a>
+                    <a href="/changelog" className="sitemap-link" target="_blank" rel="noopener noreferrer">C:\Users\i666666i\changelog</a>
                 )
                 break;
             case 'cd resources':
                 newOutputMessages.push(
-                    <a href="/resources" className="sitemap-link" target="_blank" rel="noopener noreferrer">redirect to resources</a>
+                    <a href="/resources" className="sitemap-link" target="_blank" rel="noopener noreferrer">C:\Users\i666666i\resources</a>
                 )
                 break;
             // bsod

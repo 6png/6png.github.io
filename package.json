@@ -25,7 +25,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build && npm run set-custom-domain",
-    "set-custom-domain": "gh-pages set -d build -t true -u https://i666666i.xyz"
+    "set-custom-domain": "gh-pages set -d build -t true -b https://i666666i.xyz"
   },
   "eslintConfig": {
     "extends": [
