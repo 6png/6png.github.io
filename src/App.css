@@ -3,15 +3,15 @@
     --header-background-color: rgb(22, 22, 22);
     --text-color-darkest: rgb(66, 66, 66);
     --text-color-darkerer: rgb(99, 99, 99);
-    --text-color-darker: rgb(133, 133, 133);
+    --text-color-darker: rgb(122, 122, 122);
     --text-color-normal: rgb(166, 166, 166);
     --text-color-lighter: rgb(188, 188, 188);
     --text-color-lighterer: rgb(222, 222, 222);
     --page-background-color: ;
 
     --font-family: "JetBrainsMono", "Consolas", monospace;
-    --font-url-cm: url("../public/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
-    --font-url-cons: url("../public/fonts/Consolas.ttf") format("truetype");
+    --font-url-cm: url("../public/fonts/JetBrainsMono-VariableFont_wght.ttf");
+    --font-url-cons: url("../public/fonts/Consolas.ttf");
 }
 
 @font-face {
@@ -31,7 +31,7 @@
     color: var(--text-color-normal);
     margin: 0;
     padding: 0;
-    border: 0px solid white;
+    border: 0 solid white;
 }
 
 body {
