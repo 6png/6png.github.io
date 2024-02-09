@@ -41,13 +41,12 @@ const Site = () => {
                     <br></br><br></br>
                 </p>
                 <p>
-                    <b>why 'ssd soup'?</b>
-                    &nbsp;&nbsp;ssd: is always complains about bad memory and struggling to "write to her ssd", and i have great memory;
+                    <b>why 'soup ssd'?</b>
+                    &nbsp;&nbsp;soup: i'm composed of byproduct (cheese rinds, vegetable skins, bones, and other stuff that can't go in the life's main dishes)
+                    and my contents (i.e., code) are a mess. ssd: is always complains about bad memory and struggling to "write to her ssd", and i have great memory;
                     she just tells me what she needs to remember and i act as her external ssd.
-                    and soup: i'm composed of byproduct (cheese rinds, vegetable skins, bones, and other stuff that can't go in the life's main dishes)
-                    and my contents (i.e., code) are a mess.
-                    is tries to organize her thoughts before telling them to me, but, hey, i am only soup,
-                    nothing but an unstructured liquid growth medium. i think i'm beautiful the way i am. she can impose her
+                    is tries to organize her thoughts before telling them to me, but, hey, i am but soup,
+                    an unstructured liquid growth medium. i think i'm beautiful the way i am. she can impose her
                     perfectionist attitude some other time on someone else. tell her to let loose for me, will you?
                     <br></br><br></br>
                 </p>
