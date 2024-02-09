@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './CLI.css';
-import { status, changelogUpdates, version } from '../updates.js';
+import { status, version } from '../updates.js';
+import {getCommits} from '../Changelog/githubAPI.js'
+
 
 //other stuff
-const update = changelogUpdates[0];
+const latestUpdate = (async () => {
+    try {
+        const commits = await getCommits();
+        const mostRecentCommit = commits[0];
+        console.log('most recent commit: ', mostRecentCommit);
+        return mostRecentCommit;
+    } catch (error) {
+        console.error('error fetching most recent commit: ', error);
+        throw error;
+    }
+})
 const greetings = [
     'rrrise n shine',
     'hello there, agent',
@@ -184,7 +196,7 @@ const CLI = () => {
             // latest update
             case 'lu':
                 newOutputMessages.push(
-                    update[0] + "\n" + update[1]
+                    latestUpdate[0] + "\n" + latestUpdate[1]
                 )
                 break;
             // time
@@ -239,7 +251,7 @@ operable program or batch file.`
     };
 
     useEffect(() => {
-        var outputDiv = document.querySelector('.windowContent .output');
+        let outputDiv = document.querySelector('.windowContent .output');
         if (outputDiv) {
             outputDiv.scrollTop = outputDiv.scrollHeight;
         }

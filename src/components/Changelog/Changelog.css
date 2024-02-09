@@ -19,6 +19,7 @@
 .changelogTitle {
     color: var(--text-color-darkest);
     align-self: flex-start;
+    font-size: 14px;
 }
 
 .changelogContent p {
@@ -31,15 +32,20 @@
 
 .changelogEntry {
     margin-bottom: 12px;
+    display: flex;
+    gap: 6px;
 }
 
 .date,
 .message {
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .date {
     color: var(--text-color-darkerer);
+    flex-shrink: 0;
+    width: 105px;
+    font-weight: bold;
 }
 
 .message {
