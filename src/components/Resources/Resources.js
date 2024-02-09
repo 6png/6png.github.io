@@ -5,28 +5,28 @@ const Resources = () => {
     return (
         <div className="resourcesWrapper">
             <div className="resourcesCard top">
-                <img src="/images/jellyfishcute.gif"></img>
+                <img src="/images/jellyfishcute.gif" alt="jellyfish gif"></img>
                 <p className="contentText">
                     <b>soup</b>
                 </p>
             </div>
             <div className="resourcesContentCards">
                 <div className="resourcesCard">
-                    <h4 className="contentText">tools</h4>
+                    <h4 className="contentText resourcesCardTitle">tools</h4>
                     <p className="contentText">
                         ------------------------------------------------
                     </p>
                     <ul>
                         <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">visual studio code</a>
-                            <br></br>started here
+                            <br></br>rich text editor (started here)
                         </li>
                         <li><a href="https://www.jetbrains.com/webstorm/" target="_blank" rel="noopener noreferrer">webstorm</a>
-                            <br></br>moved here
+                            <br></br>ide (moved here)
                         </li>
                     </ul>
                 </div>
                 <div className="resourcesCard">
-                    <h4 className="contentText">learn</h4>
+                    <h4 className="contentText resourcesCardTitle">learn</h4>
                     <p className="contentText">
                         ------------------------------------------------
                     </p>
@@ -35,7 +35,7 @@ const Resources = () => {
                     </ul>
                 </div>
                 <div className="resourcesCard">
-                    <h4 className="contentText">external content</h4>
+                    <h4 className="contentText resourcesCardTitle">external content</h4>
                     <p className="contentText">
                         ------------------------------------------------
                     </p>
@@ -54,7 +54,7 @@ const Resources = () => {
                     </ul>
                 </div>
                 <div className="resourcesCard">
-                    <h4 className="contentText">design inspo</h4>
+                    <h4 className="contentText resourcesCardTitle">design inspo</h4>
                     <p className="contentText">
                         ------------------------------------------------
                     </p>
@@ -68,14 +68,14 @@ const Resources = () => {
             </div>
 
             <div className="resourcesCard top">
-                <img src="/images/jellyfishcute.gif"></img>
+                <img src="/images/jellyfishcute.gif" alt="jellyfish gif"></img>
                 <p className="contentText">
                     <b>other</b>
                 </p>
             </div>
             <div className="resourcesContentCards">
                 <div className="resourcesCard">
-                    <h4 className="contentText">aim</h4>
+                    <h4 className="contentText resourcesCardTitle">aim</h4>
                     <p className="contentText">
                         ------------------------------------------------
                     </p>
@@ -102,7 +102,7 @@ const Resources = () => {
                     </ul>
                 </div>
                 <div className="resourcesCard">
-                    <h4 className="contentText">program</h4>
+                    <h4 className="contentText resourcesCardTitle">program</h4>
                     <p className="contentText">
                         ------------------------------------------------
                     </p>

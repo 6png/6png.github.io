@@ -38,7 +38,7 @@
 
 .resourcesCard ul {
     flex-direction: column;
-    gap: 1px;
+    gap: 2px;
 }
 
 .resourcesCard li li {
@@ -54,6 +54,10 @@
 
 .resourcesCard a {
     text-decoration: underline;
+}
+
+.resourcesCardTitle {
+    margin: 0 2px;
 }
 
 .siteColCard {
