@@ -13,51 +13,69 @@ const Resources = () => {
             </div>
             <div className="resourcesContentCards">
                 <div className="resourcesCard">
-                    <h4 className="contentText resourcesCardTitle">tools</h4>
-                    <hr className="resourcesCardHr"></hr>
-                    <ul>
-                        <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">visual
-                            studio code</a>
-                            <br></br>rich text editor (started here)
-                        </li>
-                        <li><a href="https://www.jetbrains.com/webstorm/" target="_blank"
-                               rel="noopener noreferrer">webstorm</a>
-                            <br></br>ide (moved here)
-                        </li>
-                    </ul>
-                </div>
-                <div className="resourcesCard">
-                    <h4 className="contentText resourcesCardTitle">learn</h4>
-                    <hr className="resourcesCardHr"></hr>
-                    <ul>
-                        <li><a href="https://theodinproject.com" target="_blank" rel="noopener noreferrer">the odin
-                            project</a></li>
-                    </ul>
-                </div>
-                <div className="resourcesCard">
-                    <h4 className="contentText resourcesCardTitle">inspo</h4>
+                    <h4 className="contentText resourcesCardTitle">use</h4>
                     <hr className="resourcesCardHr"></hr>
                     <ul>
                         <li>
-                            <Link to="/resources/site-collection">site
+                            <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">visual
+                            studio code</a>
+                            <br></br>rich text editor (started here)
+                        </li>
+                        <li>
+                            <a href="https://www.jetbrains.com/webstorm/" target="_blank"
+                               rel="noopener noreferrer">webstorm</a>
+                            <br></br>ide (moved here)
+                        </li>
+                        <li>
+                            <a href="https://namecheap.com/" target="_blank"
+                               rel="noopener noreferrer">namecheap</a>
+                            <br></br>domain registrar
+                        </li>
+                        <li>
+                            <a href="https://pages.github.com" target="_blank"
+                               rel="noopener noreferrer">github pages</a>
+                            <br></br>free hosting for static sites
+                        </li>
+                        <li>
+                            <a href="https://www.contentful.com/" target="_blank"
+                               rel="noopener noreferrer">contentful</a>
+                            <br></br>free cms with good documentation and flexible api
+                        </li>
+                    </ul>
+                </div>
+                <div className="resourcesCard">
+                    <h4 className="contentText resourcesCardTitle">learn + reference</h4>
+                    <hr className="resourcesCardHr"></hr>
+                    <ul>
+                        <li><a href="https://theodinproject.com" target="_blank" rel="noopener noreferrer">the odin
+                            project</a>
+                            <br></br>ground-up course on web dev
+                        </li>
+                        <li>
+                            <a href="https://conventionalcommits.org/" target="_blank" rel="noopener noreferrer">
+                                conventional commits</a>
+                            <br></br>style guide for git commits
+                        </li>
+                        <li>
+                            <a href="https://chat.openai.com/" target="_blank"
+                               rel="noopener noreferrer">chatgpt</a>
+                            <br></br>stackoverflow replacement
+                        </li>
+                    </ul>
+                </div>
+                <div className="resourcesCard">
+                    <h4 className="contentText resourcesCardTitle">inspire</h4>
+                    <hr className="resourcesCardHr"></hr>
+                    <ul>
+                        <li>
+                            <Link to="/resources/site-collection">personal site
                                 collection</Link>
                             <br></br>permanent bookmarks and a to-explore list, with notes
                         </li>
                     </ul>
                 </div>
                 <div className="resourcesCard">
-                    <h4 className="contentText resourcesCardTitle">references</h4>
-                    <hr className="resourcesCardHr"></hr>
-                    <ul>
-                        <li>
-                            <a href="https://conventionalcommits.org/" target="_blank" rel="noopener noreferrer">
-                                conventional commits</a>
-                            <br></br>style guide for git commits
-                        </li>
-                    </ul>
-                </div>
-                <div className="resourcesCard">
-                    <h4 className="contentText resourcesCardTitle">external content</h4>
+                    <h4 className="contentText resourcesCardTitle">link</h4>
                     <hr className="resourcesCardHr"></hr>
                     <ul>
                         <li><a href="" target="_blank" rel="noopener noreferrer">images</a></li>
@@ -121,12 +139,12 @@ const Resources = () => {
                         <li>
                             <a href="https://app.hackthebox.com/" target="_blank" rel="noopener noreferrer">hack the
                                 box</a>
-                            <br></br>interactive cybersec tutorials
+                            <br></br>cybersec tutorials
                         </li>
                         <li>
-                            <a href="https://learngitbranching.js.org" target="_blank" rel="noopener noreferrer">learn
-                                git branching</a>
-                            <br></br>interactive git tutorials
+                            <a href="https://exercism.org/" target="_blank" rel="noopener noreferrer">
+                               exercism</a>
+                            <br></br>babies' leetcode
                         </li>
                     </ul>
                 </div>
