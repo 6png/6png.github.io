@@ -29,7 +29,7 @@
 .windowTitleBar .left {
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 6px;
 }
 
 .windowTitleBar img {
@@ -39,7 +39,8 @@
 .windowTitle {
     font-weight: normal;
     color: black;
-    font-size: 10px;
+    font-size: 11px;
+    font-family: "Segoe UI", sans-serif;
 }
 
 .windowContent .output {

@@ -1,0 +1,73 @@
+.loading {
+    margin-top: 33px;
+    text-align: center;
+}
+
+.thoughtName p {
+    color: var(--text-color-darker);
+}
+
+.thoughtName p:hover {
+    color: var(--text-color-darkerer);
+    cursor: pointer;
+}
+
+.thoughtContent button {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color-normal);
+    background-color: rgb(255, 255, 255, 0);
+    border: 0;
+    font-size: 20px;
+}
+
+.thoughtContent button:hover {
+    color: var(--text-color-darkerer);
+}
+
+.thoughtContent h2 {
+    color: var(--text-color-darkerer);
+    padding-top: 12px;
+    margin-bottom: 6px;
+}
+.thoughtContent p {
+    color: var(--text-color-darker);
+    font-size: 10px;
+}
+
+.thoughtContent .timeDetails {
+    display: flex;
+    gap: 18px;
+}
+
+.thoughtContent hr {
+    margin: 3px 0;
+    border: 1px double var(--text-color-darkerer);
+}
+
+.thoughtContent .softHr {
+    border: 1px solid var(--text-color-normal);
+}
+
+.thoughtContent h2,
+.thoughtContent .timeDetails,
+.thoughtContent .thoughtContentBody {
+    padding: 0 3px;
+}
+
+.thoughtContentBody table {
+    border-collapse: collapse;
+    margin: 3px;
+}
+
+.thoughtContentBody table th,
+.thoughtContentBody table td {
+    border: 1px solid var(--text-color-darker);
+    padding: 3px;
+}
+
+.thoughtContentBody a {
+    text-decoration: underline;
+}
+
+

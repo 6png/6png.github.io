@@ -17,8 +17,11 @@ const Resources = () => {
                         ------------------------------------------------
                     </p>
                     <ul>
-                        <li><a href="https://code.visualstudio.com/">visual studio code</a>
-                            <br></br>this is the only text editor i use for html/css/js
+                        <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">visual studio code</a>
+                            <br></br>started here
+                        </li>
+                        <li><a href="https://www.jetbrains.com/webstorm/" target="_blank" rel="noopener noreferrer">webstorm</a>
+                            <br></br>moved here
                         </li>
                     </ul>
                 </div>
@@ -28,7 +31,7 @@ const Resources = () => {
                         ------------------------------------------------
                     </p>
                     <ul>
-                        <li><a href="https://theodinproject.com">the odin project</a></li>
+                        <li><a href="https://theodinproject.com" target="_blank" rel="noopener noreferrer">the odin project</a></li>
                     </ul>
                 </div>
                 <div className="resourcesCard">
@@ -37,15 +40,15 @@ const Resources = () => {
                         ------------------------------------------------
                     </p>
                     <ul>
-                        <li><a href="">images</a></li>
+                        <li><a href="" target="_blank" rel="noopener noreferrer">images</a></li>
                         <li>gifs
                             <ul>
-                                <li><a>hehe</a></li>
+                                <li><a href="" target="_blank" rel="noopener noreferrer">hehe</a></li>
                             </ul>
                         </li>
                         <li>scripts
                             <ul>
-                                <li><a>oneko</a></li>
+                                <li><a href="" target="_blank" rel="noopener noreferrer">oneko</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -57,7 +60,7 @@ const Resources = () => {
                     </p>
                     <ul>
                         <li>
-                            <a href="/resources/site-collection">site collection</a>
+                            <a href="/resources/site-collection"  target="_blank" rel="noopener noreferrer">site collection</a>
                             <br></br>permanent bookmarks and a to-explore list, with notes
                         </li>
                     </ul>
@@ -77,26 +80,23 @@ const Resources = () => {
                         ------------------------------------------------
                     </p>
                     <ul>
-                        <li><a href="">benchmark list</a></li>
-                        <li>
-                            <a href="https://store.steampowered.com/app/824270/KovaaKs/">kovaaks</a>
-                            <br></br>current best trainer
+                        <li><a href="https://docs.google.com/spreadsheets/d/1A59_tHSMtGpLwcdQaR5GmJ9EjxgPAga9q3k9MYMJ7KM/edit?usp=sharing"   target="_blank" rel="noopener noreferrer">
+                            benchmark collection</a>
                         </li>
                         <li>
-                            <a href="https://store.steampowered.com/app/1100990/Aimbeast/">aimbeast</a>
-                            <br></br>up-and-coming best trainer
+                            <a href="https://store.steampowered.com/app/824270/KovaaKs/"  target="_blank" rel="noopener noreferrer">kovaaks</a>
                         </li>
                         <li>
-                            <a href="https://store.steampowered.com/app/714010/Aimlabs/">aimlabs</a>
-                            <br></br>very bad trainer except for score system / api
+                            <a href="https://store.steampowered.com/app/1100990/Aimbeast/" target="_blank" rel="noopener noreferrer">aimbeast</a>
                         </li>
                         <li>
-                            <a href="https://github.com/helloimxtal/BallSheetOGL">ballsheetogl</a>
-                            <br></br>2d vrt
+                            <a href="https://store.steampowered.com/app/714010/Aimlabs/" target="_blank" rel="noopener noreferrer">aimlabs</a>
                         </li>
                         <li>
-                            <a href="https://aim400kg.com">aim400kg</a>
-                            <br></br>browser-based 2d trainer
+                            <a href="https://github.com/helloimxtal/BallSheetOGL" target="_blank" rel="noopener noreferrer">ballsheetogl</a>
+                        </li>
+                        <li>
+                            <a href="https://aim400kg.com" target="_blank" rel="noopener noreferrer">aim400kg</a>
                         </li>
 
                     </ul>
@@ -108,11 +108,11 @@ const Resources = () => {
                     </p>
                     <ul>
                         <li>
-                            <a href="https://app.hackthebox.com/">hack the box</a>
+                            <a href="https://app.hackthebox.com/" target="_blank" rel="noopener noreferrer">hack the box</a>
                             <br></br>interactive cybersec tutorials
                         </li>
                         <li>
-                            <a href="https://learngitbranching.js.org">learn git branching</a>
+                            <a href="https://learngitbranching.js.org" target="_blank" rel="noopener noreferrer">learn git branching</a>
                             <br></br>interactive git tutorials
                         </li>
                     </ul>
