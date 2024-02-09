@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import {getEntries, getPinnedEntries} from './contentfulAPI';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import './Thoughts.css';
 
 
-function formatDate(isoDateString) {
+export function formatDate(isoDateString) {
     const date = new Date(isoDateString);
 
     const year = date.getFullYear();
@@ -13,9 +13,7 @@ function formatDate(isoDateString) {
     const hour = String(date.getHours()).padStart(2, '0');
     const minute = String(date.getMinutes()).padStart(2, '0');
 
-    const formattedDate = `${year}-${month}-${day} ${hour}:${minute}`;
-
-    return formattedDate;
+    return `${year}-${month}-${day} ${hour}:${minute}`;
 }
 
 const RichTextComponent = ({ richText, assets }) => {

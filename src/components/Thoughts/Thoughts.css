@@ -5,6 +5,7 @@
 
 .thoughtName p {
     color: var(--text-color-darker);
+    font-size: 11px;
 }
 
 .thoughtName p:hover {
@@ -13,7 +14,8 @@
 }
 
 .thoughtContent button {
-    margin: 0;
+    /*todo: come up with better design for this button/row */
+    margin-bottom: 9px;
     padding: 0;
     color: var(--text-color-normal);
     background-color: rgb(255, 255, 255, 0);
@@ -40,6 +42,10 @@
     gap: 18px;
 }
 
+.thoughtContent .timeDetails * {
+    color: var(--text-color-normal);
+}
+
 .thoughtContent hr {
     margin: 3px 0;
     border: 1px double var(--text-color-darkerer);
@@ -55,6 +61,10 @@
     padding: 0 3px;
 }
 
+.thoughtContentBody div p {
+    margin-bottom: 3px;
+}
+
 .thoughtContentBody table {
     border-collapse: collapse;
     margin: 3px;
@@ -66,8 +76,42 @@
     padding: 3px;
 }
 
+.thoughtContentBody b,
+.thoughtContentBody i,
+.thoughtContentBody u,
+.thoughtContentBody code,
+.thoughtContentBody sup,
+.thoughtContentBody sub {
+    color: var(--text-color-darker);
+    padding: 0;
+    margin: 0;
+}
+
 .thoughtContentBody a {
     text-decoration: underline;
+}
+
+.thoughtContentBody ul {
+    display: block;
+    list-style-type: disc;
+    margin-left: 12px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.thoughtContentBody ol {
+    color: var(--text-color-darker);
+    font-size: 10px;
+    margin-left: 18px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.thoughtContentBody blockquote {
+    border-left: 3px solid var(--text-color-normal);
+    border-radius: 4px;
+    padding: 3px 6px;
+    margin: 6px 0;
 }
 
 
