@@ -113,7 +113,7 @@
 }
 
 .siteColTable .siteName {
-    flex-shrink: 6;
+    flex-shrink: 5;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -7,5 +7,8 @@ export const Permanent = [
 export const Temp = [
     ["cadence", "https://cadence.moe/", "discovered on kassy's links page\nhavent fully explored but blog and projects look interesting"],
     ["melankorin", "https://melankorin.net/", "discovered on dimden's buttons\nbookmarks worth going through"],
+    ["bitmapdreams", "http://lastsecret.net/bitmapdreams/", "gifs"],
+    ["whimsical", "http://whimsical.heartette.net/", "gifs"],
+    ["engram", "https://engrampixel.tumblr.com/", "gifs"],
 
 ]
