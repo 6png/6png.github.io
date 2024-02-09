@@ -32,12 +32,11 @@ const Site = () => {
     return (
         <div className="contentContainer">
             <div className="contentText">
-                <p>welcome! i'm is's first html/css/js project!<br></br><br></br></p>
+                <p>welcome! i'm is's first html/css/js project!<br></br>[designed for desktop browsers!]<br></br><br></br></p>
                 <p>
-                    this subpage and the other three under the 'about' page are the only parts
-                    of the site that are written with any audience in mind. is asked me, after 
-                    writing her three parts, to write a self-intro for any audience i might attract while
-                    i'm active, so here it is.
+                    only my 'about' and 'resources' pages are written with an audience in mind. after is finished
+                    writing the other three 'about' subpages, she insisted that i draft the main blurb,
+                    for any web dwellers i might attract while i'm active; so, here it is.
                     <br></br><br></br>
                 </p>
                 <p>
