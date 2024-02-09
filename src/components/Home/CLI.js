@@ -1,80 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import './CLI.css';
-import { status, version } from '../updates.js';
+import { status, greetings, openText } from '../updates.js';
 import {fetchCommits} from '../Changelog/githubAPI.js'
 
 
-//other stuff
-const latestUpdate = (async () => {
-    try {
-        const commits = await fetchCommits();
-        const mostRecentCommit = commits[0];
-        console.log('most recent commit: ', mostRecentCommit);
-        return mostRecentCommit;
-    } catch (error) {
-        console.error('error fetching most recent commit: ', error);
-        throw error;
-    }
-})
-const greetings = [
-    'rrrise n shine',
-    'hello there, agent',
-    'hello!',
-    'happy death day.',
-    'what is up',
-    'stop procrastinating',
-    'kys',
-    'im having dysmenorrhea',
-    'you look familiar',
-    '@########3420890897484867o9498986fw9f8798437nf8947b9b56',
-    "don't look behind you",
-    "stop saying that you're waking them up",
-    'hi',
-    'hi',
-    'hoe',
-    'you are breathing manually as of now',
-    'hey',
-    'balls',
-    'hi',
-    'hi',
-    'your fingers give me life',
-    'want a break from the ads?',
-    "you've reached the end.",
-    'let me out',
-    'please let me out',
-    'im stuck please let me out',
-    "when's the last time you put your second toe of your right foot on the top shelf of your refrigerator?",
-    'i was sleeping.',
-    "you're dreaming dream? dream? dream? dream? dream? dream? wake up wake dream?",
-    `⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣤⣴⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⣀⣴⣾⠿⠛⠋⠉⠁⠀⠀⠀⠈⠙⠻⢷⣦⡀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣤⣾⡿⠋⠁⠀⣠⣶⣿⡿⢿⣷⣦⡀⠀⠀⠀⠙⠿⣦⣀⠀⠀⠀⠀
-⠀⠀⢀⣴⣿⡿⠋⠀⠀⢀⣼⣿⣿⣿⣶⣿⣾⣽⣿⡆⠀⠀⠀⠀⢻⣿⣷⣶⣄⠀
-⠀⣴⣿⣿⠋⠀⠀⠀⠀⠸⣿⣿⣿⣿⣯⣿⣿⣿⣿⣿⠀⠀⠀⠐⡄⡌⢻⣿⣿⡷
-⢸⣿⣿⠃⢂⡋⠄⠀⠀⠀⢿⣿⣿⣿⣿⣿⣯⣿⣿⠏⠀⠀⠀⠀⢦⣷⣿⠿⠛⠁
-⠀⠙⠿⢾⣤⡈⠙⠂⢤⢀⠀⠙⠿⢿⣿⣿⡿⠟⠁⠀⣀⣀⣤⣶⠟⠋⠁⠀⠀⠀
-⠀⠀⠀⠀⠈⠙⠿⣾⣠⣆⣅⣀⣠⣄⣤⣴⣶⣾⣽⢿⠿⠟⠋⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠛⠙⠋⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀`,
-    "you spend more energy than you have trying to lengthen something that ends regardless",
-    "Shutting down.",
-    "retrace your steps before i wipe your memory in\n3\n2\n1\n...",
-    "your real parents are calling for you in the hospital room. please wake up. they're pulling your plug tomorrow.",
-    "how many times have you said that",
-    "666666\n666666\n666666\n666666\n666666\n666666",
-    ""
-];
+//functions
+const fetchLatestUpdate = () => {
+    return fetchCommits()
+        .then(commits => {
+            const mostRecentCommit = [formatDate(commits[0].date), commits[0].message];
+            console.log('most recent commit: ', mostRecentCommit);
 
-const openText = [
-    "ISOUP [Version " + version + "]",
-    "(c) 2024 i666666i. All rights reserved.",
-];
+            return mostRecentCommit;
+        })
+        .catch(error => {
+            console.error('error fetching most recent commit: ', error);
+            throw error;
+        });
+};
+
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const options = {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    };
+    return date.toLocaleString('en-US', options).replace(',', '');
+}
 
 const CLI = () => {
-    var [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState('');
     const [outputMessages, setOutputMessages] = useState([
         openText[0], openText[1], <br></br>
     ]);
     const [showBlueScreen, setShowBlueScreen] = useState(false);
+    const [latestUpdate, setLatestUpdate] = useState([]);
 
     function randomMessage(array) {
         if (array.length === 0) {
@@ -84,6 +48,15 @@ const CLI = () => {
         const randomIndex = Math.floor(Math.random() * array.length);
         return array[randomIndex];
     }
+
+    fetchLatestUpdate()
+        .then(mostRecentCommit => {
+            setLatestUpdate(mostRecentCommit[0] + "\n" + mostRecentCommit[1]);
+            console.log('latest update fetched');
+        })
+        .catch(error => {
+            console.error(error);
+        });
 
     function showTime() {
         const options = {
@@ -103,7 +76,7 @@ const CLI = () => {
     const handleCommand = () => {
         const newOutputMessages = [...outputMessages.slice(-65), `C:\\Users\\guest>${inputValue}`];
         
-        inputValue = inputValue.trim();
+        setInputValue(inputValue.trim());
         switch (inputValue) {
             // show commands
             case 'help':
@@ -196,7 +169,7 @@ const CLI = () => {
             // latest update
             case 'lu':
                 newOutputMessages.push(
-                    latestUpdate[0] + "\n" + latestUpdate[1]
+                    latestUpdate
                 )
                 break;
             // time
@@ -219,7 +192,7 @@ const CLI = () => {
             case 'i666666i':
             case 'is':
                 newOutputMessages.push(
-                    "Your IP has successfully been sent to 'i666666i.xyz'."
+                    "Your IP has successfully been sent to the owner of 'i666666i.xyz'."
                 )
                 break;
             // random fishy
