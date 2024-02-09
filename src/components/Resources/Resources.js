@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './Resources.css';
 
 const Resources = () => {
@@ -38,8 +39,8 @@ const Resources = () => {
                     <hr className="resourcesCardHr"></hr>
                     <ul>
                         <li>
-                            <a href="/resources/site-collection" target="_blank" rel="noopener noreferrer">site
-                                collection</a>
+                            <Link to="/resources/site-collection">site
+                                collection</Link>
                             <br></br>permanent bookmarks and a to-explore list, with notes
                         </li>
                     </ul>

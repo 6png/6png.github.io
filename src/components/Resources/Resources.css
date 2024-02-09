@@ -44,6 +44,7 @@
 .resourcesCard li li {
     list-style-type: circle;
     margin-left: 12px;
+    margin-bottom: 3px;
 }
 
 .resourcesCard li {
@@ -54,6 +55,11 @@
 
 .resourcesCard a {
     text-decoration: underline;
+}
+
+.resourcesCard a:hover,
+.resourcesCard Link:hover {
+    color: var(--text-color-darkerer);
 }
 
 .resourcesCardTitle {
