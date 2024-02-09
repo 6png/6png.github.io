@@ -110,19 +110,25 @@ const Thoughts = () => {
     const RenderThought = ({thoughtToRender})  => {
         return (
             <div className="thoughtContent">
-                <button onClick={handleBackButtonClick}>&#129052;</button>
+                <button onClick={handleBackButtonClick}>
+                    <svg width="18pt" height="18pt" version="1.1" viewBox="0 0 1200 1200"
+                         xmlns="http://www.w3.org/2000/svg" className="svg">
+                        <path
+                            d="m60 600c0 298.8 241.2 540 540 540s540-241.2 540-540c0-297.6-241.2-540-540-540s-540 242.4-540 540zm523.2-253.2c22.801 22.801 22.801 57.602 0 80.398-1.1992 2.3984-116.4 116.4-116.4 116.4h404.4c31.199 0 56.398 25.199 56.398 56.398 0 31.199-25.199 57.602-56.398 57.602l-404.4 0.003906 116.4 116.4c22.801 22.801 22.801 58.801 0 80.398-22.801 22.801-57.602 22.801-80.398 0-4.8008-4.8008-213.6-213.6-213.6-213.6-22.801-22.801-22.801-57.602 0-80.398 0 0 212.4-212.4 213.6-213.6 22.801-22.797 57.598-22.797 80.398 0.003906z"/>
+                    </svg>
+                </button>
                 <h2>{thoughtToRender.fields.title}</h2>
                 <hr></hr>
                 <div className="timeDetails">
                     <p>published: {formatDate(thoughtToRender.sys.createdAt)}</p>
                     <p>last updated: {formatDate(thoughtToRender.sys.updatedAt)}</p>
                 </div>
-                <hr className="softHr"></hr>
+                <hr className="thinHr"></hr>
                 <div className="thoughtContentBody">
                     <RichTextComponent
                         key={thoughtToRender.sys.id}
                         richText={thoughtToRender.fields.content}
-                        assets={assets} />
+                        assets={assets}/>
                 </div>
             </div>
         )
