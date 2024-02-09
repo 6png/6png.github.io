@@ -45,7 +45,7 @@ nav {
     overflow: hidden;
 }
 
-ul {
+.headerContent ul {
     display: flex;
     list-style-type: none;
     padding: 0;

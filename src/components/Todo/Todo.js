@@ -3,9 +3,19 @@ import './Todo.css'
 
 const Todo = () => {
     return (
-        <div>
-
+        <div className="bodyWrapper todo">
+            <div className="contentContainer">
+                <h2>todo</h2>
+                <hr></hr>
+                <ul>
+                    <li>add content type + link contentful api to 'site-collection'</li>
+                    <li>clean css</li>
+                    <li>add about > ..me elsewhere content</li>
+                    <li>make gifs display page</li>
+                </ul>
+            </div>
         </div>
+
     )
 }
 

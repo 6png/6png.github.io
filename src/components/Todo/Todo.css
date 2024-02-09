@@ -1,0 +1,18 @@
+.todo h2 {
+    color: var(--text-color-darkest);
+}
+
+.todo li {
+    color: var(--text-color-darker);
+    font-size: 10px;
+    margin-left: 15px;
+}
+
+.todo h2 {
+    margin: 0 2px;
+}
+
+.todo hr {
+    border-top: 1px solid var(--text-color-normal);
+    margin: 6px 0;
+}
