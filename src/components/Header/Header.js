@@ -9,7 +9,7 @@ const Header = () => {
         <header>
             <div className="headerContent">
                 <h2>
-                    <Link to="/" id="site-name">is's ssd soup</Link>
+                    <Link to="/" id="site-name">is's soup ssd</Link>
                 </h2>
                 <hr id="headerHr"></hr>
                 <NavBar />
