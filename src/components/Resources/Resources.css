@@ -36,6 +36,10 @@
     gap: 9px;
 }
 
+.siteCol {
+    justify-content: center;
+}
+
 .resourcesCard ul {
     flex-direction: column;
     gap: 2px;
@@ -71,11 +75,7 @@
     padding: 21px;
     border-radius: 9px;
     font-size: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 92%;
+    justify-self: center;
 }
 
 .siteColTable * {
@@ -86,15 +86,38 @@
 
 .siteColTable {
     border-collapse: collapse;
+    display: flex;
+    flex-direction: column;
 }
 
 .siteColTable td {
-    border: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
     padding: 6px;
+}
+
+.siteColTable tr:first-child td {
+    border-top: 1px solid gray;
+}
+
+.siteColTable td:first-child {
+    border-left: 1px solid gray;
+}
+
+.siteColTable tr {
+    display: flex;
 }
 
 .siteColTable a {
     text-decoration: underline;
+}
+
+.siteColTable .siteName {
+    flex-shrink: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .resourcesCardHr {
