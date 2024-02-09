@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './CLI.css';
 import { status, version } from '../updates.js';
-import {getCommits} from '../Changelog/githubAPI.js'
+import {fetchCommits} from '../Changelog/githubAPI.js'
 
 
 //other stuff
 const latestUpdate = (async () => {
     try {
-        const commits = await getCommits();
+        const commits = await fetchCommits();
         const mostRecentCommit = commits[0];
         console.log('most recent commit: ', mostRecentCommit);
         return mostRecentCommit;

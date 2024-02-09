@@ -1,23 +1,22 @@
 const repoOwner = '6png';
 const repoName = '6png.github.io';
-const githubAccessToken = process.env.REACT_APP_GITHUB_ACCESS_TOKEN;
-export const getCommits = async () => {
+const { Octokit } = require("@octokit/core");
+
+const octokit = new Octokit();
+
+export async function fetchCommits() {
     try {
-        const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/commits`, {
-            headers: {
-                Authorization: `token ${githubAccessToken}`
-            }
+        const response = await octokit.request('GET /repos/{owner}/{repo}/commits', {
+            owner: repoOwner,
+            repo: repoName
         });
-        const commitsData = await response.json();
-        const commitsArray = commitsData.map((commit, index) => ({
-            index: index,
+
+        return response.data.map(commit => ({
             date: commit.commit.author.date,
             message: commit.commit.message
         }));
-        console.log('commits fetched: ', commitsArray);
-        return commitsArray;
     } catch (error) {
-        console.error('error fetching commits (getCommits): ', error);
+        console.error('Error fetching commits:', error);
         throw error;
     }
-};
+}

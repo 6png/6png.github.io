@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {getCommits} from './githubAPI.js'
+import {fetchCommits} from './githubAPI.js'
 import {formatDate} from '../Thoughts/Thoughts.js'
 import './Changelog.css'
 
@@ -7,16 +7,16 @@ const Changelog = () => {
     const [commits, setCommits] = useState([]);
 
     useEffect(() => {
-        const fetchCommits = async() => {
+        const storeCommits = async() => {
             try {
-                const commits = await getCommits();
+                const commits = await fetchCommits();
                 setCommits(commits);
             } catch (error) {
                 console.error('error (Changelog:useEffect()): ', error);
             }
         };
 
-        fetchCommits();
+        storeCommits();
     }, []);
 
     const RenderCommits = ({ commitsToRender }) => {
