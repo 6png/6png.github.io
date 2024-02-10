@@ -6,7 +6,7 @@ on:
     branches:
       - main
 
-concurrency: # prevent concurrent deploys doing strange things
+concurrency: # orevent concurrent deploys doing strange things
   group: deploy-to-neocities
   cancel-in-progress: true
 
