@@ -26,4 +26,4 @@ jobs:
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: false
-        dist_dir: gh-pages/static
+        dist_dir: gh-pages
