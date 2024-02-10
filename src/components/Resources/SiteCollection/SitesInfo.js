@@ -1,12 +1,14 @@
 export const Permanent = [
-    ["sneek's realm", "https://sneekrealm.neocities.org/", "first neocities site id ever come across, in summer of '23\ndiscovered in dc bio (last.fm server)\ntried using sadgrl layout editor and gave up because i didnt want to learn html/css and the layout editor is rubbish"],
-    ["dimden", "https://dimden.dev", "discovered in dc bio after getting their betterdiscord last.fm plugin, in mid-jan '24\ninspired me finally to start learning html/css/js"],
-    ["kassy", "https://kassy.neocities.org/", "i dont remember where i found this\nalso inspired me to make a personal site\ninteresting content"],
+    ["sneek's realm", "https://sneekrealm.neocities.org/", "first neocities site id ever come across, in summer of '23"],
+    ["dimden", "https://dimden.dev", "inspired me finally to start learning html/css/js in mid-jan '24"],
+    ["kassy", "https://kassy.neocities.org/", "also inspired me to make a personal site\ninteresting content"],
+    ["lilibyte", "https://lilibyte.net/", "interesting posts *nodes and nice design"],
+
 ];
 
 export const Temp = [
-    ["cadence", "https://cadence.moe/", "discovered on kassy's links page\nhavent fully explored but blog and projects look interesting"],
-    ["melankorin", "https://melankorin.net/", "discovered on dimden's buttons\nbookmarks worth going through", "gifs"],
+    ["cadence", "https://cadence.moe/", "havent fully explored but blog and projects look interesting"],
+    ["melankorin", "https://melankorin.net/", "bookmarks worth going through"],
     ["bitmapdreams", "http://lastsecret.net/bitmapdreams/", "gifs"],
     ["whimsical", "http://whimsical.heartette.net/", "gifs"],
     ["engram", "https://engrampixel.tumblr.com/", "gifs"],

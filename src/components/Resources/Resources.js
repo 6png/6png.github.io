@@ -146,6 +146,12 @@ const Resources = () => {
                                exercism</a>
                             <br></br>babies' leetcode
                         </li>
+                        <li>
+                            <a href="https://overthewire.org/" target="_blank" rel="noopener noreferrer">
+                                overthewire</a>
+                            <br></br>cybersec games
+                        </li>
+
                     </ul>
                 </div>
             </div>

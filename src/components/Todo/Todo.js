@@ -13,13 +13,18 @@ const Todo = () => {
                     <li>add about > ..me elsewhere content</li>
                     <li>make gifs display page</li>
                     <li>add custom cursors and selection menu</li>
-                    <li>add lastfm status to cli</li>
+                    <li>cli
+                        <ul>
+                            <li>last.fm status</li>
+                            <li>acnh fishy</li>
+                            <li></li>
+                        </ul>
+                    </li>
                     <li>add getLast and getNext entries buttons to thought pages</li>
                 </ul>
             </div>
         </div>
-
-    )
-}
+    );
+};
 
 export default Todo;

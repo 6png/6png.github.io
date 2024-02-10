@@ -41,8 +41,8 @@ const Site = () => {
                 </p>
                 <p>
                     <b>why 'soup ssd'?</b>
-                    &nbsp;&nbsp;soup: i'm composed of byproduct (cheese rinds, vegetable skins, bones, and other stuff that can't go in the life's main dishes)
-                    and my contents (i.e., code) are a mess. ssd: is always complains about bad memory and struggling to "write to her ssd", and i have great memory;
+                    &nbsp;&nbsp;soup: i consist of byproduct (cheese rinds, vegetable skins, bones, etc. deemed unsuitable for life's entrees)
+                    and my contents (code) are a mess. ssd: is always complains about bad memory and struggling to "write to her ssd", and i have great memory;
                     she just tells me what she needs to remember and i act as her external ssd.
                     is tries to organize her thoughts before telling them to me, but, hey, i am but soup,
                     an unstructured liquid growth medium. i think i'm beautiful the way i am. she can impose her
@@ -54,7 +54,7 @@ const Site = () => {
                     &nbsp;&nbsp;my sole functions are to provide 1) motivation for is to learn more about
                     web development, 2) a canvas upon which she can try and apply new concepts, and
                     3) a central space to record a portion of her mind's activities, until she
-                    eventually inevitably begins to scorn me. :&lt;
+                    eventually inevitably begins to scorn me.
                     <br></br><br></br>
                 </p>
                 <p>
@@ -101,8 +101,8 @@ const Noodle = () => {
         <div className="contentContainer">
             <div className="contentText">
                 <p>
-                    i am a lousy writer, but i will write anyway, in 'thoughts', so my future self can
-                    learn from me.
+                    i am a lousy writer, but i will write anyway, in 'thoughts',
+                    for the benefit of my future self.
                     <br></br><br></br>
                 </p>
                 <p>
@@ -110,44 +110,36 @@ const Noodle = () => {
                     lightly stated, hard to understand. i attribute this judgment to the way
                     i choose to approach life. i deeply enjoy being a critic,
                     and while this passion has its benefits, easily attracting friends
-                    is not one of them. i also naturally am not drawn to many of the interests
-                    or media that most, at least my age, are drawn to; and i do not make any
-                    extra effort to engage in them to the ends of being easier to relate to.
-                    however, i still willingly choose this style of thinking and forgo the prospect of being accepted by
-                    the majority.
+                    is not one of them. i am also neither naturally drawn to nor
+                    feel particularly compelled to conform to common interests or popular media
+                    to feel relatable. instead, i forgo social acceptance to gain freedom
+                    in thought.
                     <br></br><br></br>
                 </p>
                 <p>
                     i dont really speak to anyone for 'enjoyment.' my idea of a worthwhile conversation
-                    is akin to a game of tennis, in which each swing delivers a reframed perspective or proposition
-                    that challenges the opponent. in real life, however, most players prefer to rally.
-                    and so it follows that introspection is the most practical way for me to achieve that enjoyment
-                    on-demand. i can enjoy
-                    company of animals and occasionally of other humans, but not really the talking part of it, without
-                    feeling frustrated -- at myself
-                    for not enjoying it like they do -- so i typically avoid it.
+                    is akin to a game of tennis, in which each swing intentionally delivers a reshaped perspective
+                    to challenge its opponent. in real life, however, most players prefer to rally.
+                    so i tend to wall train.
                     <br></br><br></br>
                 </p>
                 <p>
-                    many people that met me later in life believe i am cold or arrogant.
-                    to this, im really not sure how to respond, though i understand it. i think neither myself nor my
-                    thoughts superior to any other 'thing', whatever
+                    many that met me later in life believe i am cold or arrogant.
+                    to this, im really not sure how to respond, though i understand it. i dont think myself
+                    more worthy than or superior to any other 'thing', whatever
                     that should be defined as. i only prefer internal dialogue to external interaction
-                    because people dont respond well to my fiend for strange and challenging questions and i have no
-                    reason
-                    to overwhelm or bore anyone else with it. ultimately, there is nothing i can do to guarantee that
-                    others' perceptions of me
-                    match my own perception of myself, and i have no desire to invest extra effort, beyond
-                    initialization, into guaranteeing that.
+                    because people dont respond well to my fiend for probing questions and i have no
+                    reason to overwhelm or bore anyone else with it. ultimately, there is nothing i can do to guarantee that
+                    others' perceptions of me match my own perception of myself, and it would be unreasonable
+                    to invest extra effort into guaranteeing that.
                     <br></br><br></br>
                 </p>
                 <hr></hr>
                 <p>
                     <b>life goal</b>
                     <br></br>
-                    my ultimate and only goals are to firstly become financially independent and then either 1) obtain
-                    propofol or
-                    2) learn enough about the human brain / nervous system and pharmacology to formulate a
+                    my ultimate and only goals are to 1) become financially independent and 2) either obtain
+                    propofol or learn enough about the human brain / nervous system and pharmacology to formulate a
                     mixture of substances that will induce unconsciousness and eventually death before any
                     perception of pain.
                     <br></br><br></br>
@@ -248,11 +240,9 @@ const Corpus = () => {
                     <br></br><br></br>
                 </p>
                 <p>
-                    as soupy mentioned, only 'about' is written with an audience in mind.
-                    everything else is for my own documentation or technical practice.
-                    thus, any text/media you come across will be very honest and unfiltered.
-                    if this comforts you, feel free to prod around; but, if anything is concerning
-                    or triggering to you, please be responsible and click off.
+                    as soupy mentioned, only 'about' and 'resources' are written with an audience in mind.
+                    all other content serves for personal documentation or technical practice.
+                    if you come across anything too unfiltered that would affect you negatively, please be responsible and click off.
                     <br></br><br></br>
                 </p>
                 <hr></hr>
@@ -302,6 +292,7 @@ const Corpus = () => {
                         <div className="category">
                             <p className="contentText underline"><u>ears</u></p>
                             <ul>
+                                <li>deep fem voices </li>
                                 <li>dvorak</li>
                                 <li>ennio morricone</li>
                                 <li>frxgxd</li>
@@ -310,7 +301,6 @@ const Corpus = () => {
                                 <li>mahler</li>
                                 <li>paganini</li>
                                 <li>the sound of gentle waves on a smooth beach</li>
-                                <li>women's voices &gt;//&lt;</li>
                             </ul>
                         </div>
                         <p><br></br></p>
