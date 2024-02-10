@@ -1,40 +1,38 @@
-name: Deploy to neocities
+name: Deploy to multiple targets
 
-# only run on changes to gh-pages
 on:
   push:
     branches:
-      - gh-pages
-
-concurrency: # prevent concurrent deploys doing strange things
-  group: deploy-to-neocities
-  cancel-in-progress: true
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-      with:
-        ref: gh-pages  # Specify the branch to check out
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    # Set up any tools and build steps here
-    # This example uses a Node.js toolchain to build a site
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
 
-    - name: Install deps and build
-      run: |
-        npm ci
-        npm run build
+      - name: Install dependencies and build
+        run: |
+          npm ci
+          npm run build
 
-    # When the dist_dir is ready, deploy it to neocities
-    - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities@v1
-      with:
-        api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-        cleanup: false
-        dist_dir: .  # Change to the directory where your build artifacts are stored
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/gh-pages'
+        run: |
+          gh-pages -d build
+
+      # When the dist_dir is ready, deploy it to neocities
+      - name: Deploy to neocities
+        if: github.ref === 'refs/heads/gh-pages'
+        uses: bcomnes/deploy-to-neocities@v1
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: false
+          dist_dir: .  # Change to the directory where your build artifacts are stored
