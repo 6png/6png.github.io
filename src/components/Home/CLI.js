@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './CLI.css';
 import { status, greetings, openText } from '../updates.js';
 import {fetchCommits} from '../Changelog/githubAPI.js'
+import {Link} from 'react-router-dom';
 
 
 //functions
@@ -82,7 +83,7 @@ const CLI = () => {
             case 'help':
             case 'commands':
                 newOutputMessages.push(
-                    'available commands:\nhello, lu, cd, time, status, fishy, cls'
+                    'available commands:\nhello, dir, cd, lu, time, status, cls'
                 )
                 break;
             // hello typos
@@ -110,38 +111,43 @@ const CLI = () => {
             case 'ls':
             case 'dir':
                 newOutputMessages.push(
-                    "home* | about | stats | thoughts | resources | changelog"
+                    "home* | about | stats | thoughts | resources | todo | changelog"
                 )
                 break;
             // sitemap links
             case 'cd':
                 newOutputMessages.push(
-                    "C:\\Users\\guest"
+                    "C:\\Users\\SOUP"
                 )
                 break;
             case 'cd about':
                 newOutputMessages.push(
-                    <a href="/about" className="sitemap-link" target="_blank" rel="noopener noreferrer">C:\Users\i666666i\about</a>,
+                    <a href="/about" className="sitemap-link" target="_blank" rel="noopener noreferrer">C:\Users\SOUP\about</a>,
                 )
                 break;
             case 'cd stats':
                 newOutputMessages.push(
-                    <a href="/stats" className="sitemap-link" target="_blank" rel="noopener noreferrer">C:\Users\i666666i\stats</a>,
+                    <Link to='/todo' className="sitemap-link">C:\Users\SOUP\stats</Link>,
                 )
                 break;
             case 'cd thoughts':
                 newOutputMessages.push(
-                    <a href="/thoughts" className="sitemap-link" target="_blank" rel="noopener noreferrer">C:\Users\i666666i\thoughts</a>
+                    <Link to='/todo' className="sitemap-link">C:\Users\SOUP\thoughts</Link>
                 )
                 break;
             case 'cd changelog':
                 newOutputMessages.push(
-                    <a href="/changelog" className="sitemap-link" target="_blank" rel="noopener noreferrer">C:\Users\i666666i\changelog</a>
+                    <Link to='/todo' className="sitemap-link">C:\Users\SOUP\changelog</Link>
                 )
                 break;
             case 'cd resources':
                 newOutputMessages.push(
-                    <a href="/resources" className="sitemap-link" target="_blank" rel="noopener noreferrer">C:\Users\i666666i\resources</a>
+                    <Link to='/todo' className="sitemap-link">C:\Users\SOUP\resources</Link>
+                )
+                break;
+            case 'cd todo':
+                newOutputMessages.push(
+                    <Link to='/todo' className="sitemap-link">C:\Users\SOUP\todo</Link>
                 )
                 break;
             // bsod
@@ -187,12 +193,6 @@ const CLI = () => {
             case 'soup':
                 newOutputMessages.push(
                     "hiiiiii :3"
-                )
-                break;
-            case 'i666666i':
-            case 'is':
-                newOutputMessages.push(
-                    "Your IP has successfully been sent to the owner of 'i666666i.xyz'."
                 )
                 break;
             // random fishy
@@ -268,7 +268,7 @@ operable program or batch file.`
                             ))}
                         </div>
                         <div className="input-container">
-                            <p className="thing">C:\Users\guest&gt;</p>
+                            <p className="thing">C:\Users\SOUP&gt;</p>
                             <input
                                 type="text"
                                 className="input"
