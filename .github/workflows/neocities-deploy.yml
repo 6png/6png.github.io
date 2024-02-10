@@ -1,10 +1,10 @@
 name: Deploy to neocities
 
-# only run on changes to gh-pages
+# only run on changes to main
 on:
   push:
     branches:
-      - gh-pages
+      - main
 
 concurrency: # prevent concurrent deploys doing strange things
   group: deploy-to-neocities
@@ -26,7 +26,6 @@ jobs:
       run: |
         npm i
         npm run build
-        gh-pages -d build
         
     # When the dist_dir is ready, deploy it to neocities
     - name: Deploy to neocities
