@@ -88,6 +88,10 @@
     margin: 0;
 }
 
+.thoughtContentBody img {
+    max-width: 96%;
+}
+
 .thoughtContentBody a {
     text-decoration: underline;
 }
