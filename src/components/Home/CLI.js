@@ -77,7 +77,7 @@ const CLI = () => {
     const handleCommand = () => {
         const newOutputMessages = [...outputMessages.slice(-65), `C:\\Users\\SOUP>${inputValue}`];
         
-        setInputValue(inputValue.trim());
+        setInputValue(inputValue.trim().toLowerCase());
         switch (inputValue) {
             // show commands
             case 'help':
@@ -151,8 +151,8 @@ const CLI = () => {
                 )
                 break;
             // bsod
-            case 'rmdir guest':
-            case 'rd guest':
+            case 'rmdir soup':
+            case 'rd soup':
                 setTimeout(() => {
                     setShowBlueScreen(true);
                 }, 3000);
