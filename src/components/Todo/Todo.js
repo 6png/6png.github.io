@@ -12,6 +12,8 @@ const Todo = () => {
                     <li>clean css</li>
                     <li>add about > ..me elsewhere content</li>
                     <li>make gifs display page</li>
+                    <li>add custom cursors</li>
+                    <li>add lastfm status to cli</li>
                 </ul>
             </div>
         </div>
