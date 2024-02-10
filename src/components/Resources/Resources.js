@@ -78,15 +78,15 @@ const Resources = () => {
                     <h4 className="contentText resourcesCardTitle">link</h4>
                     <hr className="resourcesCardHr"></hr>
                     <ul>
-                        <li><a href="" target="_blank" rel="noopener noreferrer">images</a></li>
+                        <li><Link to='/oops'>images</Link></li>
                         <li>gifs
                             <ul>
-                                <li><a href="" target="_blank" rel="noopener noreferrer">hehe</a></li>
+                                <li><Link to='/oops'>hehe</Link></li>
                             </ul>
                         </li>
                         <li>scripts
                             <ul>
-                                <li><a href="" target="_blank" rel="noopener noreferrer">oneko</a></li>
+                                <li><Link to='/oops'>asfsaf</Link></li>
                             </ul>
                         </li>
                     </ul>
