@@ -75,7 +75,7 @@ const CLI = () => {
     }
 
     const handleCommand = () => {
-        const newOutputMessages = [...outputMessages.slice(-65), `C:\\Users\\guest>${inputValue}`];
+        const newOutputMessages = [...outputMessages.slice(-65), `C:\\Users\\SOUP>${inputValue}`];
         
         setInputValue(inputValue.trim());
         switch (inputValue) {
