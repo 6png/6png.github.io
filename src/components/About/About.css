@@ -91,7 +91,6 @@ button:hover {
 .contentText li,
 .likes li {
     list-style-type: circle;
-    margin-left: 10px;
     margin-right: 3px;
     color: var(--text-color-darker);
 }
@@ -100,6 +99,14 @@ button:hover {
 .likes ul {
     flex-direction: column;
     gap: 0;
+    padding-left: 17px;
+}
+
+@-moz-document url-prefix() {
+    .contentText ul,
+    .likes ul {
+        padding-left: 13px;
+    }
 }
 
 .weirdo {

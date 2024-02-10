@@ -5,13 +5,25 @@
 .todo h2 {
     color: var(--text-color-darkest);
     font-size: 15px;
+    padding-left: 2px;
+}
+
+.todo ul {
+    margin-top: 6px;
 }
 
 .todo li {
     color: var(--text-color-darker);
     font-size: 10px;
-    margin-left: 15px;
+    margin-left: 20px;
     margin-bottom: 6px;
+}
+
+@-moz-document url-prefix() {
+    .todo li {
+        margin-left: 15px;
+        margin-bottom: 6px;
+    }
 }
 
 .todo h2 {
