@@ -30,7 +30,7 @@ jobs:
 
       # When the dist_dir is ready, deploy it to neocities
       - name: Deploy to neocities
-        if: github.ref === 'refs/heads/gh-pages'
+        if: github.ref == 'refs/heads/gh-pages'
         uses: bcomnes/deploy-to-neocities@v1
         with:
           api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
