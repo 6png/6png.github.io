@@ -11,6 +11,7 @@ import Resources from './components/Resources/Resources';
 import SiteCollection from './components/Resources/SiteCollection/SiteCollection';
 import Todo  from './components/Todo/Todo'
 import Changelog from './components/Changelog/Changelog';
+import UnderConstruction from './components/UnderConstruction/UnderConstruction';
 import './App.css';
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/resources/site-collection" element={<SiteCollection />} />
           <Route path="/changelog" element={<Changelog />} />
           <Route path="/todo" element={<Todo />} />
+            <Route path="/oops" element={<UnderConstruction />} />
         </Routes>
       </div>
       <div><Footer /></div>
