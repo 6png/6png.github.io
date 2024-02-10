@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - gh-pages
-    paths:
-      - '**'
 
 concurrency: # prevent concurrent deploys doing strange things
   group: deploy-to-neocities
