@@ -29,6 +29,7 @@
 }
 .thoughtContent p {
     color: var(--text-color-darker);
+    min-height: 10px;
     font-size: 10px;
 }
 
@@ -45,6 +46,12 @@
 .thoughtContent hr {
     margin: 9px 0;
     border-top: 1px solid var(--text-color-darker);
+}
+
+.thoughtContentBody hr {
+    border-top: 1px dashed var(--text-color-darker);
+    margin-top: 15px;
+    margin-bottom: 6px;
 }
 
 .thoughtContent .thinDashedHr {
@@ -69,7 +76,7 @@
     padding: 0 3px;
 }
 
-.thoughtContentBody div p {
+.thoughtContentBody > p {
     margin-bottom: 9px;
 }
 
@@ -89,7 +96,8 @@
 .thoughtContentBody u,
 .thoughtContentBody code,
 .thoughtContentBody sup,
-.thoughtContentBody sub {
+.thoughtContentBody sub,
+.thoughtContentBody li {
     color: var(--text-color-darker);
     padding: 0;
     margin: 0;
@@ -98,6 +106,7 @@
 .thoughtContentBody img {
     max-width: 96%;
     height: auto;
+    margin: 6px 0;
 }
 
 .thoughtContentBody a {
@@ -105,12 +114,18 @@
 }
 
 .thoughtContentBody ul {
+    margin-left: 12px;
+    margin-bottom: 3px;
+}
+
+.thoughtContentBody > ul {
     display: block;
     list-style-type: disc;
-    margin-left: 12px;
     margin-bottom: 6px;
-    margin-top: 6px;
+    margin-top: -6px;
 }
+
+
 
 .thoughtContentBody ol {
     color: var(--text-color-darker);
