@@ -12,28 +12,30 @@ import SiteCollection from './components/Resources/SiteCollection/SiteCollection
 import Todo  from './components/Todo/Todo'
 import Changelog from './components/Changelog/Changelog';
 import UnderConstruction from './components/UnderConstruction/UnderConstruction';
+import Mobile from './components/Mobile/Mobile';
 import './App.css';
 
 const App = () => {
-  return (
-    <div className="pageWrapper">
-      <div><Header /></div>
-      <div className="component">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/stats" element={<Stats />} />
-          <Route path="/thoughts" element={<Thoughts />} />
-          <Route path="/resources" element={<Resources />} />
-          <Route path="/resources/site-collection" element={<SiteCollection />} />
-          <Route path="/changelog" element={<Changelog />} />
-          <Route path="/todo" element={<Todo />} />
-            <Route path="/oops" element={<UnderConstruction />} />
-        </Routes>
-      </div>
-      <div><Footer /></div>
-    </div>
-  );
+    return (
+        <div className="pageWrapper">
+            <div><Header /></div>
+            <div className="component">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/stats" element={<Stats />} />
+                    <Route path="/thoughts" element={<Thoughts />} />
+                    <Route path="/resources" element={<Resources />} />
+                    <Route path="/resources/site-collection" element={<SiteCollection />} />
+                    <Route path="/changelog" element={<Changelog />} />
+                    <Route path="/todo" element={<Todo />} />
+                    <Route path="/oops" element={<UnderConstruction />} />
+                    <Route path="/mobile" element={<Mobile />} />
+                </Routes>
+            </div>
+            <div><Footer /></div>
+        </div>
+    );
 };
 
 export default App;

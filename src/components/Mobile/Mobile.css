@@ -1,0 +1,14 @@
+.mobileDiv {
+    display: flex;
+    background-color: var(--header-background-color);
+    padding: 66px;
+    margin: 33px;
+    border-radius: 50px;
+    justify-content: center;
+    border: 12px solid gray;
+}
+
+.mobileDiv h1 {
+    color: red;
+    text-align: center;
+}
