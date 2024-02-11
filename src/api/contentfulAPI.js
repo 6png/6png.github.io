@@ -1,9 +1,26 @@
 import * as contentful from 'contentful';
+import {BLOCKS} from "@contentful/rich-text-types";
+import React from "react";
 
 const client = contentful.createClient({
     space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
     accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN,
 });
+
+export const renderOptions = {
+    renderNode: {
+        [BLOCKS.EMBEDDED_ASSET]: (node) => {
+            return (
+                <img
+                    src={`https://${node.data.target.fields.file.url}`}
+                    height={node.data.target.fields.file.details.image.height}
+                    width={node.data.target.fields.file.details.image.width}
+                    alt={node.data.target.fields.description}
+                />
+            )
+        }
+    }
+}
 
 export const getThoughts = async () => {
     try {

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {getThoughts, getPinnedThoughts} from '../../api/contentfulAPI';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
-import { BLOCKS } from "@contentful/rich-text-types";
+import { renderOptions} from '../../api/contentfulAPI';
 import './Thoughts.css';
 
 
@@ -15,21 +15,6 @@ export function formatDate(isoDateString) {
     const minute = String(date.getMinutes()).padStart(2, '0');
 
     return `${year}-${month}-${day} ${hour}:${minute}`;
-}
-
-const renderOptions = {
-    renderNode: {
-        [BLOCKS.EMBEDDED_ASSET]: (node) => {
-            return (
-                <img
-                    src={`https://${node.data.target.fields.file.url}`}
-                    height={node.data.target.fields.file.details.image.height}
-                    width={node.data.target.fields.file.details.image.width}
-                    alt={node.data.target.fields.description}
-                    />
-            )
-        }
-    }
 }
 
 const Thoughts = () => {
