@@ -3,9 +3,12 @@ import './Mobile.css'
 
 const Mobile = (() => {
     return (
-        <div className="mobileDiv">
-            <h1>please visit me again when you're on a DESKTOP browser.</h1>
+        <div className="mobilePageWrapper">
+            <div className="mobileDiv">
+                <h1>please visit me again when you're on a DESKTOP browser.</h1>
+            </div>
         </div>
+
     )
 })
 

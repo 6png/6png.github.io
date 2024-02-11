@@ -1,11 +1,18 @@
+.mobilePageWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .mobileDiv {
     display: flex;
     background-color: var(--header-background-color);
-    padding: 66px;
+    padding: 33px;
     margin: 33px;
     border-radius: 50px;
     justify-content: center;
     border: 12px solid gray;
+    max-width: 300px
 }
 
 .mobileDiv h1 {
