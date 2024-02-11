@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {getEntries, getPinnedEntries} from './contentfulAPI';
+import {getThoughts, getPinnedThoughts} from '../../api/contentfulAPI';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import './Thoughts.css';
 
@@ -47,25 +47,22 @@ const Thoughts = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const entries = await getEntries();
+                const [entries, pinnedEntries] = await Promise.all([getThoughts(), getPinnedThoughts()]);
                 setThoughts(entries);
                 console.log(entries);
 
-                const entryAssets = [];
-                for (const entry of entries) {
+                const entryAssets = await Promise.all(entries.map(async entry => {
                     const content = entry.fields.content;
                     const options = {
                         renderNode: {
                             'embedded-asset-block': (node) => {
-                                entryAssets.push(node.data.target);
+                                return node.data.target;
                             }
                         }
                     };
-                    await documentToReactComponents(content, options);
-                }
-                setAssets(entryAssets);
-
-                const pinnedEntries = await getPinnedEntries();
+                    return documentToReactComponents(content, options);
+                }));
+                setAssets(entryAssets.flat());
                 setPinnedThoughts(pinnedEntries);
                 console.log(pinnedEntries);
                 setLoading(false);

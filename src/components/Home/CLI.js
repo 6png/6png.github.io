@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './CLI.css';
 import { status, greetings, openText } from '../updates.js';
-import {fetchCommits} from '../Changelog/githubAPI.js'
+import {fetchCommits} from '../../api/githubAPI.js'
 import {Link} from 'react-router-dom';
 
 

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {fetchCommits} from './githubAPI.js'
+import {fetchCommits} from '../../api/githubAPI.js'
 import {formatDate} from '../Thoughts/Thoughts.js'
 import './Changelog.css'
 
