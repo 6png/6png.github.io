@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {getThoughts, getPinnedThoughts} from '../../api/contentfulAPI';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from "@contentful/rich-text-types";
 import './Thoughts.css';
 
 
@@ -16,24 +17,20 @@ export function formatDate(isoDateString) {
     return `${year}-${month}-${day} ${hour}:${minute}`;
 }
 
-const RichTextComponent = ({ richText, assets }) => {
-    return <div>{renderRichTextWithAssets(richText, assets)}</div>;
-};
-
-const renderRichTextWithAssets = (richText, assets) => {
-    return documentToReactComponents(richText, {
-        renderNode: {
-            'embedded-asset-block': (node) => {
-                const asset = assets.find((asset) => asset.sys.id === node.data.target.sys.id);
-                if (asset) {
-                    return <img src={asset.fields.file.url} alt={asset.fields.title} />;
-                } else {
-                    return <div>asset not found</div>;
-                }
-            },
-        },
-    });
-};
+const renderOptions = {
+    renderNode: {
+        [BLOCKS.EMBEDDED_ASSET]: (node) => {
+            return (
+                <img
+                    src={`https://${node.data.target.fields.file.url}`}
+                    height={node.data.target.fields.file.details.image.height}
+                    width={node.data.target.fields.file.details.image.width}
+                    alt={node.data.target.fields.description}
+                    />
+            )
+        }
+    }
+}
 
 const Thoughts = () => {
     const [selectedThought, setSelectedThought] = useState(null);
@@ -42,29 +39,13 @@ const Thoughts = () => {
     const [error, setError] = useState(null);
     const [thoughts, setThoughts] = useState([]);
     const [pinnedThoughts, setPinnedThoughts] = useState([]);
-    const [assets, setAssets] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const [entries, pinnedEntries] = await Promise.all([getThoughts(), getPinnedThoughts()]);
                 setThoughts(entries);
-                console.log(entries);
-
-                const entryAssets = await Promise.all(entries.map(async entry => {
-                    const content = entry.fields.content;
-                    const options = {
-                        renderNode: {
-                            'embedded-asset-block': (node) => {
-                                return node.data.target;
-                            }
-                        }
-                    };
-                    return documentToReactComponents(content, options);
-                }));
-                setAssets(entryAssets.flat());
                 setPinnedThoughts(pinnedEntries);
-                console.log(pinnedEntries);
                 setLoading(false);
             } catch (error) {
                 setError(error.message);
@@ -105,6 +86,7 @@ const Thoughts = () => {
     };
 
     const RenderThought = ({thoughtToRender})  => {
+
         return (
             <div className="thoughtContent">
                 <button onClick={handleBackButtonClick}>
@@ -119,10 +101,7 @@ const Thoughts = () => {
                 </div>
                 <hr className="doubleHr1"></hr>
                 <div className="thoughtContentBody">
-                    <RichTextComponent
-                        key={thoughtToRender.sys.id}
-                        richText={thoughtToRender.fields.content}
-                        assets={assets}/>
+                    {documentToReactComponents(thoughtToRender.fields.content, renderOptions)}
                 </div>
                 <hr className="doubleHr2"></hr>
                 <div className="thoughtContentFooter">

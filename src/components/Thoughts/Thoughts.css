@@ -43,7 +43,7 @@
 }
 
 .thoughtContent hr {
-    margin: 3px 0;
+    margin: 9px 0;
     border-top: 1px solid var(--text-color-darker);
 }
 
@@ -67,10 +67,6 @@
 .thoughtContent .timeDetails,
 .thoughtContent .thoughtContentBody {
     padding: 0 3px;
-}
-
-.thoughtContentBody {
-    margin-top: 12px;
 }
 
 .thoughtContentBody div p {
@@ -101,6 +97,7 @@
 
 .thoughtContentBody img {
     max-width: 96%;
+    height: auto;
 }
 
 .thoughtContentBody a {
