@@ -14,7 +14,7 @@
 
 .todo li {
     color: var(--text-color-darker);
-    font-size: 10px;
+    font-size: 11px;
     margin-left: 20px;
     margin-bottom: 6px;
 }

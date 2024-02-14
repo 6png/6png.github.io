@@ -40,4 +40,5 @@ footer {
 
 .bottom p {
     color: var(--text-color-darkerer);
+    font-size: 11px;
 }

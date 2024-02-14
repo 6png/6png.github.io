@@ -30,7 +30,7 @@
 .thoughtContent p {
     color: var(--text-color-darker);
     min-height: 10px;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .thoughtContent .timeDetails {
@@ -96,8 +96,7 @@
 .thoughtContentBody u,
 .thoughtContentBody code,
 .thoughtContentBody sup,
-.thoughtContentBody sub,
-.thoughtContentBody li {
+.thoughtContentBody sub {
     color: var(--text-color-darker);
     padding: 0;
     margin: 0;
@@ -113,19 +112,20 @@
     text-decoration: underline;
 }
 
-.thoughtContentBody ul {
-    margin-left: 12px;
-    margin-bottom: 3px;
-}
-
 .thoughtContentBody > ul {
     display: block;
     list-style-type: disc;
     margin-bottom: 6px;
     margin-top: -6px;
+    padding-left: 20px;
 }
 
 
+@-moz-document url-prefix() {
+    .thoughtContentBody ul {
+        padding-left: 14px;
+    }
+}
 
 .thoughtContentBody ol {
     color: var(--text-color-darker);

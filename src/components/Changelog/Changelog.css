@@ -39,13 +39,13 @@
 
 .date,
 .message {
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .date {
     color: var(--text-color-darkerer);
     flex-shrink: 0;
-    width: 105px;
+    width: 115px;
     font-weight: bold;
 }
 

@@ -12,10 +12,10 @@ const About = () => {
         <div className="bodyWrapper">
             <div className="side-menu">
                 <nav>
-                    <button className={selectedContent === 'site' ? 'highlighted' : ''} onClick={() => { console.log('clicked'); handleSidebarClick('site') }}>.. the site</button>
-                    <button className={selectedContent === 'noodle' ? 'highlighted' : ''} onClick={() => { handleSidebarClick('noodle') }}> .. me (noodle)</button>
-                    <button className={selectedContent === 'corpus' ? 'highlighted' : ''} onClick={() => { handleSidebarClick('corpus') }}> .. me (corpus)</button>
-                    <button className={selectedContent === 'links' ? 'highlighted' : ''} onClick={() => { handleSidebarClick('links') }}> .. me, elsewhere</button>
+                    <button className={selectedContent === 'site' ? 'highlighted' : ''} onClick={() => { console.log('clicked'); handleSidebarClick('site') }}>the site</button>
+                    <button className={selectedContent === 'noodle' ? 'highlighted' : ''} onClick={() => { handleSidebarClick('noodle') }}>me (noodle)</button>
+                    <button className={selectedContent === 'corpus' ? 'highlighted' : ''} onClick={() => { handleSidebarClick('corpus') }}>me (corpus)</button>
+                    <button className={selectedContent === 'links' ? 'highlighted' : ''} onClick={() => { handleSidebarClick('links') }}>me, elsewhere</button>
                 </nav>
             </div>
             <div className="content">
@@ -292,7 +292,6 @@ const Corpus = () => {
                         <div className="category">
                             <p className="contentText underline"><u>ears</u></p>
                             <ul>
-                                <li>deep fem voices </li>
                                 <li>dvorak</li>
                                 <li>ennio morricone</li>
                                 <li>frxgxd</li>
