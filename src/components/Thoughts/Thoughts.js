@@ -92,7 +92,9 @@ const Thoughts = () => {
                 <div className="thoughtContentFooter">
                     <div className="timeDetails">
                         <p>
-                            (is) posted {formatDate(thoughtToRender.sys.createdAt)}pt |
+                            (is) posted {formatDate(thoughtToRender.sys.createdAt)}pt
+                        </p>
+                        <p>
                             last updated {formatDate(thoughtToRender.sys.updatedAt)}pt
                         </p>
                     </div>

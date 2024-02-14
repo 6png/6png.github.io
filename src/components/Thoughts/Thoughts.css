@@ -35,12 +35,12 @@
 
 .thoughtContent .timeDetails {
     display: flex;
-    flex-direction: column;
-    margin: 6px 0;
+    justify-content: space-between;
 }
 
 .thoughtContent .timeDetails * {
     color: var(--text-color-normal);
+    font-size: 9px;
 }
 
 .thoughtContent hr {
@@ -104,6 +104,8 @@
 
 .thoughtContentBody img {
     max-width: 96%;
+    max-height: 180px;
+    width: auto;
     height: auto;
     margin: 6px 0;
 }
@@ -148,5 +150,20 @@
 
 .svg:hover {
     fill: var(--text-color-darker);
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
 }
 
