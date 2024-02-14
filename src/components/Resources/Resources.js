@@ -70,7 +70,7 @@ const Resources = () => {
                         <li>
                             <Link to="/resources/site-collection">personal site
                                 collection</Link>
-                            <br></br>permanent bookmarks and a to-explore list, with notes
+                            <br></br>personal sites i think are interesting, with notes
                         </li>
                     </ul>
                 </div>
@@ -106,7 +106,7 @@ const Resources = () => {
                     <hr className="resourcesCardHr"></hr>
                     <ul>
                         <li><a
-                            href="https://docs.google.com/spreadsheets/d/1A59_tHSMtGpLwcdQaR5GmJ9EjxgPAga9q3k9MYMJ7KM/edit?usp=sharing"
+                            href="https://docs.google.com/spreadsheets/d/14GUE1bw-KpsriCD9MV19mP8-AmMkpBIRiOFFfTFi7OE/edit?usp=sharing"
                             target="_blank" rel="noopener noreferrer">
                             benchmark collection</a>
                         </li>
