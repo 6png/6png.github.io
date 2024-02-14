@@ -119,13 +119,16 @@
     list-style-type: disc;
     margin-bottom: 6px;
     margin-top: -6px;
-    padding-left: 20px;
+}
+
+.thoughtContentBody li {
+    margin-left: 20px;
 }
 
 
 @-moz-document url-prefix() {
-    .thoughtContentBody ul {
-        padding-left: 14px;
+    .thoughtContentBody li {
+        margin-left: 14px;
     }
 }
 
