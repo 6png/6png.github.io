@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {getThoughts, getPinnedThoughts} from '../../api/contentfulAPI';
+import {fetchThoughts, fetchPinnedThoughts} from '../../api/contentfulAPI';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import { renderOptions} from '../../api/contentfulAPI';
 import './Thoughts.css';
@@ -28,7 +28,7 @@ const Thoughts = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const [entries, pinnedEntries] = await Promise.all([getThoughts(), getPinnedThoughts()]);
+                const [entries, pinnedEntries] = await Promise.all([fetchThoughts(), fetchPinnedThoughts()]);
                 setThoughts(entries);
                 setPinnedThoughts(pinnedEntries);
                 setLoading(false);

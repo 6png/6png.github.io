@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {getPermanentSites, getTemporarySites} from '../../../api/contentfulAPI';
+import {fetchPermanentSites, fetchTemporarySites} from '../../../api/contentfulAPI';
 import '../Resources.css'
 
 const SiteCollection = () => {
@@ -10,9 +10,9 @@ const SiteCollection = () => {
     useEffect(() => {
         const fetchData = async() => {
             try {
-                setPermanentSites(await getPermanentSites());
+                setPermanentSites(await fetchPermanentSites());
                 console.log(permanentSites);
-                setTemporarySites(await getTemporarySites());
+                setTemporarySites(await fetchTemporarySites());
                 console.log(temporarySites);
 
                 setLoading(false);

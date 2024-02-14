@@ -1,26 +1,37 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import {fetchTodo} from '../../api/contentfulAPI'
+import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import './Todo.css'
 
 const Todo = () => {
+    const [todo, setTodo] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchData = async() => {
+            try {
+                setTodo(await fetchTodo());
+                console.log(todo);
+
+                setLoading(false);
+            } catch (error) {
+                console.error('error fetching todo:', error);
+            }
+        }
+        fetchData();
+    }, [todo]);
+
+    if (loading) {
+        return <div className="loading">loading...</div>;
+    }
     return (
         <div className="bodyWrapper todo">
             <div className="contentContainer">
                 <h2>todo</h2>
                 <hr></hr>
-                <ul>
-                    <li>clean css</li>
-                    <li>add about > ..me elsewhere content</li>
-                    <li>make gifs display page</li>
-                    <li>add custom cursors and selection menu</li>
-                    <li>cli
-                        <ul>
-                            <li>last.fm status</li>
-                            <li>acnh fishy</li>
-                            <li></li>
-                        </ul>
-                    </li>
-                    <li>add getLast and getNext entries buttons to thought pages</li>
-                </ul>
+                <div>
+                    {documentToReactComponents(todo.fields.tasks)}
+                </div>
             </div>
         </div>
     );

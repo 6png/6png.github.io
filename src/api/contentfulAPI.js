@@ -49,14 +49,13 @@ export const renderOptions = {
     }
 }
 
-export const getThoughts = async () => {
+export const fetchThoughts = async () => {
     try {
         const response = await client.getEntries({
             content_type: 'thought',
             select: 'fields,sys',
             order: '-sys.createdAt',
         });
-        console.log('fetched');
         return response.items;
     } catch (error) {
         console.error('error fetching thoughts:', error);
@@ -64,14 +63,13 @@ export const getThoughts = async () => {
     }
 };
 
-export const getPinnedThoughts = async () => {
+export const fetchPinnedThoughts = async () => {
     try {
         const response = await client.getEntries({
             content_type: 'thought',
             select: 'fields,sys',
             'metadata.tags.sys.id[all]': 'pin',
         });
-        console.log('pinned fetched');
         return response.items;
     } catch (error) {
         console.error('error fetching pinned thoughts:', error);
@@ -79,14 +77,13 @@ export const getPinnedThoughts = async () => {
     }
 };
 
-export const getPermanentSites = async() => {
+export const fetchPermanentSites = async() => {
     try {
         const response = await client.getEntries({
             content_type: 'site',
             select: 'fields,sys',
             'metadata.tags.sys.id[all]': 'permanent',
         });
-        console.log('sites fetched');
         return response.items;
     } catch (error) {
         console.error('error fetching permanent sites:', error);
@@ -94,17 +91,31 @@ export const getPermanentSites = async() => {
     }
 };
 
-export const getTemporarySites = async() => {
+export const fetchTemporarySites = async() => {
     try {
         const response = await client.getEntries({
             content_type: 'site',
             select: 'fields,sys',
             'metadata.tags[exists]': false,
         });
-        console.log('sites fetched');
         return response.items;
     } catch (error) {
         console.error('error fetching temporary sites:', error);
+        throw error;
+    }
+};
+
+export const fetchTodo = async() => {
+    try {
+        const response = await client.getEntries({
+            content_type: 'todo',
+            select: 'fields',
+        });
+        console.log(response.items[0]);
+        console.log('todo fetched');
+        return response.items[0];
+    } catch (error) {
+        console.error('error fetching todo items:', error);
         throw error;
     }
 };
