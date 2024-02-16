@@ -73,3 +73,8 @@ div {
     width: 100%;
 }
 
+select {
+    background-color: var(--header-background-color);
+    font-size: 11px;
+    border-radius: 3px;
+}

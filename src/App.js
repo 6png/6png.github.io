@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Route, Routes} from "react-router-dom";
 
 import Header from './components/Header/Header';
@@ -13,11 +13,39 @@ import Todo  from './components/Todo/Todo'
 import Changelog from './components/Changelog/Changelog';
 import UnderConstruction from './components/UnderConstruction/UnderConstruction';
 import Mobile from './components/Mobile/Mobile';
+import CursorMenu from './components/CursorMenu/CursorMenu';
 import './App.css';
 
 const App = () => {
+    const [selectedCursor, setSelectedCursor] = useState(() => {
+        return (
+            //localStorage.getItem('selectedCursor') ||
+            'default');
+    });
+
+    const handleCursorChange = (cursor) => {
+        setSelectedCursor(cursor);
+        //localStorage.setItem('selectedCursor', cursor);
+        document.documentElement.style.cursor = cursor;
+
+        if (cursor !== 'default') {
+            document.documentElement.classList.add('custom-cursor');
+        } else {
+            document.documentElement.classList.remove('custom-cursor');
+        }
+    };
+
+
+    const cursorOptions = [
+        {label: 'default', value: 'default'},
+        { label: 'rafis hddt', value: 'url(/cursors/rafishddt.png), auto' },
+        { label: 'zeeqplus1', value: 'url(/cursors/zeeqplus1.png), auto' },
+        { label: 'plus', value: 'url(/cursors/plus.png), auto' },
+
+    ]
+
     return (
-        <div className="pageWrapper">
+        <div className="pageWrapper" style={{cursor: selectedCursor}}>
             <div><Header /></div>
             <div className="component">
                 <Routes>
@@ -33,7 +61,9 @@ const App = () => {
                     <Route path="/mobile" element={<Mobile />} />
                 </Routes>
             </div>
-            <div><Footer /></div>
+            <div>
+                <Footer cursorMenu={<CursorMenu options={cursorOptions} onSelect={handleCursorChange}/>} />
+            </div>
         </div>
     );
 };

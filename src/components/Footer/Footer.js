@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import './Footer.css';
 
-const Footer = () => {
+const Footer = ({cursorMenu}) => {
     return (
         <footer>
             <div className="footerContent">
@@ -11,7 +11,7 @@ const Footer = () => {
                     <Link to="changelog">changelog</Link>
                 </div>
                 <div className="bottom">
-                    <p>idk yet</p>
+                    {cursorMenu}
                     <p>&copy; 2024 i666666i &lt;3</p>
                 </div>
             </div>

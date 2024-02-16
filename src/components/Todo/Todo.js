@@ -19,7 +19,7 @@ const Todo = () => {
             }
         }
         fetchData();
-    }, [todo]);
+    }, );
 
     if (loading) {
         return <div className="loading">loading...</div>;
