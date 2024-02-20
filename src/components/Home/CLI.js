@@ -227,7 +227,7 @@ const CLI = () => {
                 break;
             case 'r':
             case 'recent':
-                for (const rt in recentTracks) {
+                for (const rt of recentTracks) {
                     newOutputMessages.push(
                         rt + "\n"
                     )

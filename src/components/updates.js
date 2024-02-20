@@ -48,7 +48,13 @@ export const greetings = [
     "your real parents are calling for you in the hospital room. please wake up. they're pulling your plug tomorrow.",
     "how many times have you said that",
     "666666\n666666\n666666\n666666\n666666\n666666",
-    ""
+    "who are you?",
+    "did you remember to lock your doors?",
+    "wake up",
+    "would u still love me if i were a worm",
+    "there are currently over 2^128 possible ip addresses and i chose yours",
+    "you love to act like you have control over anything that happens..",
+    "SEND THIS TO 10 FRIENDS NOW OR YOUR MOTHER WILL DIE TONIGHT! 412"
 ];
 
 export const openText = [
