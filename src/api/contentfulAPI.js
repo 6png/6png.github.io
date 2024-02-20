@@ -63,19 +63,20 @@ export const fetchThoughts = async () => {
     }
 };
 
-export const fetchPinnedThoughts = async () => {
+export const fetchThoughtsByTag = async(tag) => {
     try {
         const response = await client.getEntries({
             content_type: 'thought',
             select: 'fields,sys',
-            'metadata.tags.sys.id[all]': 'pin',
+            'metadata.tags.sys.id[all]': tag,
+            order: '-sys.createdAt',
         });
         return response.items;
     } catch (error) {
-        console.error('error fetching pinned thoughts:', error);
+        console.error('error fetching thoughts:', error);
         throw error;
     }
-};
+}
 
 export const fetchPermanentSites = async() => {
     try {

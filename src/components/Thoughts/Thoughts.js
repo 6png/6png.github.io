@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {fetchThoughts, fetchPinnedThoughts} from '../../api/contentfulAPI';
+import {fetchThoughts, fetchThoughtsByTag} from '../../api/contentfulAPI';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import { renderOptions} from '../../api/contentfulAPI';
 import './Thoughts.css';
@@ -24,13 +24,20 @@ const Thoughts = () => {
     const [error, setError] = useState(null);
     const [thoughts, setThoughts] = useState([]);
     const [pinnedThoughts, setPinnedThoughts] = useState([]);
+    const [daysThoughts, setDaysThoughts] = useState([]);
+    const [progressThoughts, setProgressThoughts] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const [entries, pinnedEntries] = await Promise.all([fetchThoughts(), fetchPinnedThoughts()]);
+                const entries = await fetchThoughts();
                 setThoughts(entries);
+                const pinnedEntries = await fetchThoughtsByTag('pin');
                 setPinnedThoughts(pinnedEntries);
+                const daysEntries = await fetchThoughtsByTag('day');
+                setDaysThoughts(daysEntries);
+                const progressEntries = await fetchThoughtsByTag('progress');
+                setProgressThoughts(progressEntries);
                 setLoading(false);
             } catch (error) {
                 setError(error.message);
@@ -108,8 +115,17 @@ const Thoughts = () => {
             <div className="side-menu">
                 <nav>
                     <button className={selectedContent === 'pinned' ? 'highlighted' : ''}
-                            onClick={() => handleSidebarClick('pinned')}>pinned</button>
-                    <button className={selectedContent === 'all' ? 'highlighted' : ''} onClick={() => handleSidebarClick('all')}>all</button>
+                            onClick={() => handleSidebarClick('pinned')}>pinned
+                    </button>
+                    <button className={selectedContent === 'days' ? 'highlighted' : ''}
+                            onClick={() => handleSidebarClick('days')}>days
+                    </button>
+                    <button className={selectedContent === 'progress' ? 'highlighted' : ''}
+                            onClick={() => handleSidebarClick('progress')}>progress
+                    </button>
+                    <button className={selectedContent === 'all' ? 'highlighted' : ''}
+                            onClick={() => handleSidebarClick('all')}>all
+                    </button>
                 </nav>
             </div>
             <div className="contentContainer thoughts">
@@ -119,6 +135,24 @@ const Thoughts = () => {
                     ) : (
                         <>
                             <RenderThoughts thoughtsToRender={pinnedThoughts}/>
+                        </>
+                    )
+                )}
+                {selectedContent === 'days' && (
+                    selectedThought ? (
+                        <RenderThought thoughtToRender={selectedThought} />
+                    ) : (
+                        <>
+                            <RenderThoughts thoughtsToRender={daysThoughts}/>
+                        </>
+                    )
+                )}
+                {selectedContent === 'progress' && (
+                    selectedThought ? (
+                        <RenderThought thoughtToRender={selectedThought} />
+                    ) : (
+                        <>
+                            <RenderThoughts thoughtsToRender={progressThoughts}/>
                         </>
                     )
                 )}
