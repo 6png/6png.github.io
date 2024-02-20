@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './CLI.css';
 import { status, greetings, openText } from '../updates.js';
 import {fetchCommits} from '../../api/githubAPI.js'
+import {fetchRecentTracks} from "../../api/lastfmAPI";
 import {Link} from 'react-router-dom';
 
 
@@ -40,7 +41,7 @@ const CLI = () => {
     ]);
     const [showBlueScreen, setShowBlueScreen] = useState(false);
     const [latestUpdate, setLatestUpdate] = useState([]);
-
+    const [recentTracks, setRecentTracks] = useState([]);
     function randomMessage(array) {
         if (array.length === 0) {
             return 'no messages';
@@ -50,14 +51,25 @@ const CLI = () => {
         return array[randomIndex];
     }
 
-    fetchLatestUpdate()
-        .then(mostRecentCommit => {
-            setLatestUpdate(mostRecentCommit[0] + "\n" + mostRecentCommit[1]);
-            console.log('latest update fetched');
-        })
-        .catch(error => {
-            console.error(error);
-        });
+    useEffect(() => {
+        fetchLatestUpdate()
+            .then(mostRecentCommit => {
+                setLatestUpdate(mostRecentCommit[0] + "\n" + mostRecentCommit[1]);
+                console.log('latest update fetched');
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+        fetchRecentTracks()
+            .then(tracks => {
+                if (tracks) {
+                    setRecentTracks(tracks);
+                } else {
+                    console.log('no recent tracks');
+                }
+            });
+    }, []);
 
     function showTime() {
         const options = {
@@ -75,7 +87,7 @@ const CLI = () => {
     }
 
     const handleCommand = () => {
-        const newOutputMessages = [...outputMessages.slice(-65), `C:\\Users\\SOUP>${inputValue}`];
+        const newOutputMessages = [...outputMessages.slice(-66), `C:\\Users\\SOUP>${inputValue}`];
         
         setInputValue(inputValue.trim().toLowerCase());
         switch (inputValue) {
@@ -206,10 +218,30 @@ const CLI = () => {
                     openText[0], openText[1],
                 )
                 break;
+            // lfm recents
+            case 'fm':
+            case 'np':
+                newOutputMessages.push(
+                    recentTracks[0]
+                )
+                break;
+            case 'r':
+            case 'recent':
+                for (const rt in recentTracks) {
+                    newOutputMessages.push(
+                        rt + "\n"
+                    )
+                }
+                break;
             // misc hidden
             case '<3':
                 newOutputMessages.push(
                     "<3"
+                )
+                break;
+            case 'kms':
+                newOutputMessages.push(
+                    "do it"
                 )
                 break;
             default:
