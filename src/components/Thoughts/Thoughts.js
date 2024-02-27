@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {fetchThoughts, fetchThoughtsByTag} from '../../api/contentfulAPI';
+import React, {useEffect, useState, useRef} from 'react';
+import {fetchThoughts} from '../../api/contentfulAPI';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import { renderOptions} from '../../api/contentfulAPI';
 import './Thoughts.css';
@@ -23,30 +23,31 @@ const Thoughts = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [thoughts, setThoughts] = useState([]);
-    const [pinnedThoughts, setPinnedThoughts] = useState([]);
-    const [daysThoughts, setDaysThoughts] = useState([]);
-    const [progressThoughts, setProgressThoughts] = useState([]);
+
+    const pinnedThoughtsRef = useRef([]);
+    const daysThoughtsRef = useRef([]);
+    const progressThoughtsRef = useRef([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const entries = await fetchThoughts();
                 setThoughts(entries);
-                const pinnedEntries = await fetchThoughtsByTag('pin');
-                setPinnedThoughts(pinnedEntries);
-                const daysEntries = await fetchThoughtsByTag('day');
-                setDaysThoughts(daysEntries);
-                const progressEntries = await fetchThoughtsByTag('progress');
-                setProgressThoughts(progressEntries);
+                pinnedThoughtsRef.current = entries.filter(entry => entry.metadata.tags.some(tag => tag.sys.id === 'pin'));
+                daysThoughtsRef.current = entries.filter(entry => entry.metadata.tags.some(tag => tag.sys.id === 'day'));
+                progressThoughtsRef.current = entries.filter(entry => entry.metadata.tags.some(tag => tag.sys.id === 'progress'));
+
                 setLoading(false);
             } catch (error) {
-                setError(error.message);
+                setError(error);
                 setLoading(false);
             }
         };
 
         fetchData();
     }, []);
+
+    console.log(thoughts[0]);
 
     const handleThoughtClick = (thought) => {
         setSelectedThought(thought);
@@ -134,7 +135,7 @@ const Thoughts = () => {
                         <RenderThought thoughtToRender={selectedThought} />
                     ) : (
                         <>
-                            <RenderThoughts thoughtsToRender={pinnedThoughts}/>
+                            <RenderThoughts thoughtsToRender={pinnedThoughtsRef.current}/>
                         </>
                     )
                 )}
@@ -143,7 +144,7 @@ const Thoughts = () => {
                         <RenderThought thoughtToRender={selectedThought} />
                     ) : (
                         <>
-                            <RenderThoughts thoughtsToRender={daysThoughts}/>
+                            <RenderThoughts thoughtsToRender={daysThoughtsRef.current}/>
                         </>
                     )
                 )}
@@ -152,7 +153,7 @@ const Thoughts = () => {
                         <RenderThought thoughtToRender={selectedThought} />
                     ) : (
                         <>
-                            <RenderThoughts thoughtsToRender={progressThoughts}/>
+                            <RenderThoughts thoughtsToRender={progressThoughtsRef.current}/>
                         </>
                     )
                 )}

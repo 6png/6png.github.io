@@ -1,19 +1,18 @@
-import React, {useState, useEffect} from 'react'
-import {fetchPermanentSites, fetchTemporarySites} from '../../../api/contentfulAPI';
+import React, {useState, useEffect, useRef} from 'react'
+import {fetchSites} from '../../../api/contentfulAPI';
 import '../Resources.css'
 
 const SiteCollection = () => {
-    const [permanentSites, setPermanentSites] = useState([]);
-    const [temporarySites, setTemporarySites] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const permanentSitesRef = useRef([]);
+    const temporarySitesRef = useRef([]);
     useEffect(() => {
         const fetchData = async() => {
             try {
-                setPermanentSites(await fetchPermanentSites());
-                console.log(permanentSites);
-                setTemporarySites(await fetchTemporarySites());
-                console.log(temporarySites);
+                const entries = await fetchSites();
+                permanentSitesRef.current = entries.filter(entry => entry.metadata.tags.some(tag => tag.sys.id === 'permanent'));
+                temporarySitesRef.current = entries.filter(entry => entry.metadata.tags.some(tag => tag.sys.id === 'temporary'));
 
                 setLoading(false);
             } catch (error) {
@@ -21,7 +20,7 @@ const SiteCollection = () => {
             }
         }
         fetchData();
-    }, [permanentSites, temporarySites]);
+    }, []);
 
 
     function generateSitesTable(sites) {
@@ -45,8 +44,8 @@ const SiteCollection = () => {
         );
     }
 
-    const PermanentSitesTable = generateSitesTable(permanentSites);
-    const TemporarySitesTable = generateSitesTable(temporarySites);
+    const PermanentSitesTable = generateSitesTable(permanentSitesRef.current);
+    const TemporarySitesTable = generateSitesTable(temporarySitesRef.current);
 
     if (loading) {
         return <div className="loading">loading...</div>;

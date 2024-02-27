@@ -53,7 +53,7 @@ export const fetchThoughts = async () => {
     try {
         const response = await client.getEntries({
             content_type: 'thought',
-            select: 'fields,sys',
+            select: 'fields,sys,metadata',
             order: '-sys.createdAt',
         });
         return response.items;
@@ -63,45 +63,16 @@ export const fetchThoughts = async () => {
     }
 };
 
-export const fetchThoughtsByTag = async(tag) => {
-    try {
-        const response = await client.getEntries({
-            content_type: 'thought',
-            select: 'fields,sys',
-            'metadata.tags.sys.id[all]': tag,
-            order: '-sys.createdAt',
-        });
-        return response.items;
-    } catch (error) {
-        console.error('error fetching thoughts:', error);
-        throw error;
-    }
-}
-
-export const fetchPermanentSites = async() => {
+export const fetchSites = async() => {
     try {
         const response = await client.getEntries({
             content_type: 'site',
-            select: 'fields,sys',
-            'metadata.tags.sys.id[all]': 'permanent',
+            select: 'fields,sys,metadata',
+            order:'sys.createdAt',
         });
         return response.items;
     } catch (error) {
-        console.error('error fetching permanent sites:', error);
-        throw error;
-    }
-};
-
-export const fetchTemporarySites = async() => {
-    try {
-        const response = await client.getEntries({
-            content_type: 'site',
-            select: 'fields,sys',
-            'metadata.tags[exists]': false,
-        });
-        return response.items;
-    } catch (error) {
-        console.error('error fetching temporary sites:', error);
+        console.error('error fetching sites:', error);
         throw error;
     }
 };
