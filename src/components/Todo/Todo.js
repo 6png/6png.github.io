@@ -1,16 +1,16 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import {fetchTodo} from '../../api/contentfulAPI'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import './Todo.css'
 
 const Todo = () => {
-    const [todo, setTodo] = useState([]);
+    const todo= useRef([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async() => {
             try {
-                setTodo(await fetchTodo());
+                todo.current = await fetchTodo();
                 console.log(todo);
 
                 setLoading(false);
@@ -19,7 +19,7 @@ const Todo = () => {
             }
         }
         fetchData();
-    }, );
+    }, []);
 
     if (loading) {
         return <div className="loading">loading...</div>;
@@ -30,7 +30,7 @@ const Todo = () => {
                 <h2>todo</h2>
                 <hr></hr>
                 <div>
-                    {documentToReactComponents(todo.fields.tasks)}
+                    {documentToReactComponents(todo.current.fields.tasks)}
                 </div>
             </div>
         </div>

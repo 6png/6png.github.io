@@ -13,7 +13,7 @@
 }
 
 .todo li {
-    color: var(--text-color-darker);
+    color: var(--text-color-darkest);
     font-size: 11px;
     margin-left: 20px;
     margin-bottom: 6px;
