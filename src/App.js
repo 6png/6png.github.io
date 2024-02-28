@@ -5,7 +5,6 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import About from './components/About/About';
-import Stats from './components/Stats/Stats';
 import Thoughts from './components/Thoughts/Thoughts';
 import Resources from './components/Resources/Resources';
 import SiteCollection from './components/Resources/SiteCollection/SiteCollection';
@@ -51,7 +50,6 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/stats" element={<Stats />} />
                     <Route path="/thoughts" element={<Thoughts />} />
                     <Route path="/resources" element={<Resources />} />
                     <Route path="/resources/site-collection" element={<SiteCollection />} />
