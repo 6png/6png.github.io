@@ -13,7 +13,7 @@ const Resources = () => {
             </div>
             <div className="resourcesContentCards">
                 <div className="resourcesCard">
-                    <h4 className="contentText resourcesCardTitle">use</h4>
+                    <h4 className="contentText resourcesCardTitle">tools</h4>
                     <hr className="resourcesCardHr"></hr>
                     <ul>
                         <li>
@@ -44,7 +44,7 @@ const Resources = () => {
                     </ul>
                 </div>
                 <div className="resourcesCard">
-                    <h4 className="contentText resourcesCardTitle">learn + reference</h4>
+                    <h4 className="contentText resourcesCardTitle">learn</h4>
                     <hr className="resourcesCardHr"></hr>
                     <ul>
                         <li><a href="https://theodinproject.com" target="_blank" rel="noopener noreferrer">the odin
@@ -58,13 +58,15 @@ const Resources = () => {
                         </li>
                         <li>
                             <a href="https://chat.openai.com/" target="_blank"
-                               rel="noopener noreferrer">chatgpt</a>
-                            <br></br>stackoverflow replacement
+                               rel="noopener noreferrer">chatgpt (3.5)</a> /&nbsp;
+                            <a href="https://copilot.microsoft.com/" target="_blank"
+                               rel="noopener noreferrer">copilot (4)</a>
+                            <br></br>stack overflow substitute for most problems
                         </li>
                     </ul>
                 </div>
                 <div className="resourcesCard">
-                    <h4 className="contentText resourcesCardTitle">inspire</h4>
+                    <h4 className="contentText resourcesCardTitle">inspo</h4>
                     <hr className="resourcesCardHr"></hr>
                     <ul>
                         <li>
@@ -75,15 +77,11 @@ const Resources = () => {
                     </ul>
                 </div>
                 <div className="resourcesCard">
-                    <h4 className="contentText resourcesCardTitle">link</h4>
+                    <h4 className="contentText resourcesCardTitle">stuff</h4>
                     <hr className="resourcesCardHr"></hr>
                     <ul>
                         <li><Link to='/oops'>images</Link></li>
-                        <li>gifs
-                            <ul>
-                                <li><Link to='/oops'>hehe</Link></li>
-                            </ul>
-                        </li>
+                        <li><Link to='/oops'>gifs</Link></li>
                         <li>scripts
                             <ul>
                                 <li><Link to='/oops'>asfsaf</Link></li>
@@ -137,11 +135,6 @@ const Resources = () => {
                     <hr className="resourcesCardHr"></hr>
                     <ul>
                         <li>
-                            <a href="https://app.hackthebox.com/" target="_blank" rel="noopener noreferrer">hack the
-                                box</a>
-                            <br></br>cybersec tutorials
-                        </li>
-                        <li>
                             <a href="https://exercism.org/" target="_blank" rel="noopener noreferrer">
                                exercism</a>
                             <br></br>babies' leetcode
@@ -149,7 +142,7 @@ const Resources = () => {
                         <li>
                             <a href="https://overthewire.org/" target="_blank" rel="noopener noreferrer">
                                 overthewire</a>
-                            <br></br>cybersec games
+                            <br></br>linux games
                         </li>
 
                     </ul>
