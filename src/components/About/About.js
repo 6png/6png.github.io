@@ -75,7 +75,7 @@ const Site = () => {
 
                 <p>
                     <b>where is your present held?</b>
-                    &nbsp;&nbsp;<a href="https://6png.github.io"><u>github</u></a>.
+                    &nbsp;&nbsp;<a href="https://github.com/6png/6png.github.io"><u>github</u></a>.
                     <br></br><br></br>
                 </p>
 
@@ -88,7 +88,7 @@ const Site = () => {
                 <p className="signoff">
                     <br></br>
                     love,&nbsp;
-                    <i>soup</i>
+                    <b><i>soup</i></b>
                 </p>
             </div>
         </div>
@@ -102,7 +102,7 @@ const Noodle = () => {
             <div className="contentText">
                 <p>
                     i am a lousy writer, but i will write anyway, in 'thoughts',
-                    for the benefit of my future self.
+                    for my future self's benefit/entertainment.
                     <br></br><br></br>
                 </p>
                 <p>
@@ -119,19 +119,20 @@ const Noodle = () => {
                 <p>
                     i dont really speak to anyone for 'enjoyment.' my idea of a worthwhile conversation
                     is akin to a game of tennis, in which each swing intentionally delivers a reshaped perspective
-                    to challenge its opponent. in real life, however, most players prefer to rally.
-                    so i tend to wall train.
+                    to challenge its opponent. in real life, however, most players prefer to rally, to relax.
+                    and my idea of relaxation does not involve any interaction with other humans.
+                    so i tend to either wall train, watch other matches, or juggle.
                     <br></br><br></br>
                 </p>
                 <p>
                     many that met me later in life believe i am cold or arrogant.
                     to this, im really not sure how to respond, though i understand it. i dont think myself
-                    more worthy than or superior to any other 'thing', whatever
-                    that should be defined as. i only prefer internal dialogue to external interaction
-                    because people dont respond well to my fiend for probing questions and i have no
-                    reason to overwhelm or bore anyone else with it. ultimately, there is nothing i can do to guarantee that
-                    others' perceptions of me match my own perception of myself, and it would be unreasonable
-                    to invest extra effort into guaranteeing that.
+                    more worthy than or superior to any other thing. i only prefer internal dialogue to external interaction
+                    because most dont respond well to my penchant for probing questions and i have no
+                    reason to irritate, overwhelm, or bore them with it.
+                    this is my explanation, but there is ultimately nothing i can do to guarantee that
+                    others' perceptions of me match my own perception of myself, and it would be futile
+                    to invest extra effort in trying to guarantee that.
                     <br></br><br></br>
                 </p>
                 <hr></hr>
@@ -139,9 +140,8 @@ const Noodle = () => {
                     <b>life goal</b>
                     <br></br>
                     my ultimate and only goals are to 1) become financially independent and 2) either obtain
-                    propofol or learn enough about the human brain / nervous system and pharmacology to formulate a
-                    mixture of substances that will induce unconsciousness and eventually death before any
-                    perception of pain.
+                    propofol or learn enough about the human brain / nervous system and pharmacology to formulate or
+                    just recreate a substance that induces unconsciousness and eventually death before pain.
                     <br></br><br></br>
                 </p>
                 <p>
@@ -150,12 +150,8 @@ const Noodle = () => {
                 </p>
                 <ul>
                     <li>access to euthanasia in chronic illness, old age, and other extenuating circumstances is a basic
-                        human right
-                        that should be protected by law
+                        human right that should be protected by law
                     </li>
-                    <ul className="subul">
-
-                    </ul>
                     <li>debate is productive and necessary</li>
                     <li>collective pursuit of truth results in peace</li>
                 </ul>
@@ -257,11 +253,10 @@ const Corpus = () => {
                             <ul>
                                 <li>aim training</li>
                                 <li>building mech kbs</li>
-                                <li>collecting stationery</li>
                                 <li>learning new skills</li>
-                                <li>making lanyards</li>
                                 <li>playing with my dog</li>
                                 <li>programming</li>
+                                <li>rearranging furniture</li>
                                 <li>sorting small objects</li>
                                 <li>time tracking</li>
                                 <li>trying new mice</li>
@@ -273,7 +268,7 @@ const Corpus = () => {
                             <ul>
                                 <li>creed aventus for her</li>
                                 <li>creed love in white</li>
-                                <li>cold humid cloudy morning air</li>
+                                <li>cold humid morning air on a cloudy day</li>
                                 <li>tom ford black orchid</li>
                             </ul>
                         </div>
@@ -284,6 +279,7 @@ const Corpus = () => {
                                 <li>beachfront views</li>
                                 <li>grave of the fireflies</li>
                                 <li>minimalism</li>
+                                <li>natural light</li>
                                 <li>stalking people online</li>
                             </ul>
                         </div>
@@ -298,8 +294,10 @@ const Corpus = () => {
                                 <li>john williams</li>
                                 <li>katagiri</li>
                                 <li>mahler</li>
+                                <li>orchestral classical, esp romantic and late-romantic</li>
                                 <li>paganini</li>
                                 <li>the sound of gentle waves on a smooth beach</li>
+                                <li>upbeat/nostalgic dnb and mashcore</li>
                             </ul>
                         </div>
                         <p><br></br></p>
@@ -308,17 +306,17 @@ const Corpus = () => {
                             <ul>
                                 <li>berries</li>
                                 <li>botan rice candy</li>
+                                <li>치즈 핫도그 [mozz corn dogs]</li>
                                 <li>chipotle</li>
                                 <li>in-n-out</li>
                                 <li>mac n cheese</li>
-                                <li>reg milk tea / brown sugar milk with mini boba, 50% sugar, and 50% ice</li>
                                 <li>most crunchy things</li>
                                 <li>penne alla vodka</li>
-                                <li>popcorn</li>
-                                <li>sakuma drops (choc)</li>
+                                <li>popcorn (not sweet)</li>
+                                <li>reg milk tea / brown sugar milk</li>
                                 <li>salad</li>
                                 <li>water</li>
-                                <li>치즈 핫도그</li>
+                                <li>小笼包 [xlb]</li>
                             </ul>
                         </div>
                     </div>
@@ -328,24 +326,25 @@ const Corpus = () => {
                             <ul>
                                 <li>alcohol</li>
                                 <li>auricularia auricula-judae</li>
+                                <li>bach piano</li>
                                 <li>being required to speak for long periods</li>
                                 <li>being sick</li>
                                 <li>boiled carrots</li>
                                 <li>carpet</li>
+                                <li>complacency</li>
                                 <li>cross-pollinating plants</li>
+                                <li>dim sum</li>
                                 <li>dry hands</li>
                                 <li>grammar mistakes</li>
                                 <li>mushrooms</li>
                                 <li>people that treat animals poorly</li>
-                                <li>repetitive fugue-y piano pieces</li>
                                 <li>reading fiction books</li>
-                                <li>rote memorization</li>
+                                <li>memorization</li>
+                                <li>seafood, except fish</li>
                                 <li>sleep</li>
-                                <li>soup (the food, not my site)</li>
-                                <li>staying 'on task'</li>
+                                <li>soup (vegetable water)</li>
                                 <li>story-based games</li>
                                 <li>the nature of life</li>
-                                <li>when people say they're 'all aim no brain' but actually have horrible mechanics</li>
                                 <li>'white' lies</li>
                             </ul>
                         </div>
